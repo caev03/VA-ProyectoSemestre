@@ -1,6 +1,8 @@
 # VA-ProyectoSemestre
 
-**WHAT:** Varias tablas de datos con distintas dimensiones.  Tabla 1 atributos categóricos de los paises, su acrónimo y su nombre en español, inglés y portugués.   
+**WHAT:** 
+Varias tablas de datos con distintas dimensiones.  
+Tabla 1 atributos categóricos de los paises, su acrónimo y su nombre en español, inglés y portugués.   
 Tabla 2 con los atributos categóricos de los productos que exporta o importa cada país con su respectiva llave categórica.  
 Tabla 3: La tabla mas grande contiene los atributos incluidos en cada proceso comercial. Sus atributos abarcan desde los categóricos: tipo de comercio, identificador a la tabla 2 del producto, pais importador y exportador, asi como los atributos cuantitativos como el volumen y valor monetario en millones de dólares de cada comercio o el atributo ordenado temporal del año.
 La cuarta y última tabla, algunas de las dimensiones representan los años, si es de importación o de exportación, la cantidad, el valor total en millones de dolares, el país y el identificador a una tabla con los productos. Un país tiene tantos registros como productos que importe o exporte.
