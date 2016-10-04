@@ -1,6 +1,9 @@
 # VA-ProyectoSemestre
 
-**WHAT:** Varias tablas de datos con distintas dimensiones. Una tabla con una breve información de los pasices, su acrónimo y su nombre en español, inglés y portugués. Otra tabla con los productos que exporta e importa cada país. Una tercera tabla más grande con los registros de comercio de cada país. En esta última tabla, algunas de las dimensione srepresentan los años, si es de importación o de exportación, la cantidad, el valor total en millones de dolares, el país y el identificador a una tabla con los productos. Un país tiene tantos registros como productos que importe o exporte.
+**WHAT:** Varias tablas de datos con distintas dimensiones.  Tabla 1 atributos categóricos de los paises, su acrónimo y su nombre en español, inglés y portugués.   
+Tabla 2 con los atributos categóricos de los productos que exporta o importa cada país con su respectiva llave categórica.  
+Tabla 3: La tabla mas grande contiene los atributos incluidos en cada proceso comercial. Sus atributos abarcan desde los categóricos: tipo de comercio, identificador a la tabla 2 del producto, pais importador y exportador, asi como los atributos cuantitativos como el volumen y valor monetario en millones de dólares de cada comercio o el atributo ordenado temporal del año.
+La cuarta y última tabla, algunas de las dimensiones representan los años, si es de importación o de exportación, la cantidad, el valor total en millones de dolares, el país y el identificador a una tabla con los productos. Un país tiene tantos registros como productos que importe o exporte.
 
 **WHY:**   
 T1: Encontrar caracteristicas entre los comercios de los paises, para fomentar nuevos TLC o a las empresas.  
@@ -8,10 +11,8 @@ T2: Explorar los Tratados de Libre Comercio de los paises y los productos que el
 T3: Buscar y presentar cuales son los paices que hacen mayor uso de su TCL.
 
 
-**HOW:**
 
-
-**Autores:**  
+Autores:  
 Camilo Escobar Velásquez  
 David Ricardo Mayorga  
 Felipe Matè
