@@ -8,8 +8,10 @@ T2: Explorar los Tratados de Libre Comercio de los paises y los productos que el
 T3: Buscar y presentar cuales son los paices que hacen mayor uso de su TCL.
 
 
+**HOW:**
 
-Autores:  
+
+**Autores:**  
 Camilo Escobar Velásquez  
 David Ricardo Mayorga  
 Felipe Matè
