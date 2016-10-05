@@ -6,13 +6,12 @@ David Ricardo Mayorga
 Felipe Matè Porras
 
 
-**WHAT:**   
-Varias tablas de datos con distintas dimensiones.  
-Tabla 1 con atributos categóricos de los paises, su acrónimo y su nombre en español, inglés y portugués.   
-Tabla 2 con los atributos categóricos de los productos que exporta o importa cada país con su respectiva llave categórica.  
-Tabla 3: La tabla mas grande contiene los atributos incluidos en cada proceso comercial. Sus atributos abarcan desde los categóricos: tipo de comercio, identificador a la tabla 2 del producto, pais importador y exportador, asi como los atributos cuantitativos como el volumen y valor monetario en millones de dólares de cada comercio o el atributo ordenado temporal del año.
-La cuarta y última tabla, algunas de las dimensiones representan los años, si es de importación o de exportación, la cantidad, el valor total en millones de dolares, el país y el identificador a una tabla con los productos. Un país tiene tantos registros como productos que importe o exporte.   
-Tabla 4 con los datos del TLC entre paises y los productos que éste tratado abarca. No ha sido entregada por el cliente.
+**WHAT:**
+Los datos constan principalmente de diferentes tablas que estan agrupadas en 2 grupos principales: Registro de votaciones tanto regionales como de las principales ciudades y tablas de acompañamiento .
+
+Los datos estan representados en tablas cuya granularidad es cantidad de votos recibidos por un candidato en una fecha en una mesa ubicada en un punto de votación de la localidad/región dada para una curul mientras pertenecia a un partido politico especifico.
+
+Estos datos estan conformados por atributos de tipo categoricos cómo los nombres de las localidades/regiones, nombre del candidato, nombre de la curul a la que se presenta, nombre del partido politico y atributos de tipo cuantitativo como la cantidad de votos y la fecha de la votación y estan organizados secuencialmente. Finalmente, al ser datos de las votaciones el dataset es estatico, puede aumentar con el tiempo, pero los datos obtenidos no cambian una vez publicados.
 
 **WHY:**   
 T1: Encontrar caracteristicas entre los comercios de los paises, para fomentar nuevos TLC.  
