@@ -20,6 +20,9 @@ T2: Explorar los Tratados de Libre Comercio de los paises y los productos que el
 T3.1: Presentar y localizar los paises que hacen mayor uso de su TCL.   
 T3.2: Localizar los paises que están desaprovechando sus TLCs al comerciar productos con paises sin TLC o con una tasa mayor.
 
+**HOW:**
+La grafica cuenta de dos partes fundamentales. La primera grafica consta de un eje horiontal que cuenta con separadores para los diferentes años y sobre el que reposa para cada año un Treemap. Se busca que por medio de una selección realizada durante el uso de la visualización poder escoger el dominio de los datos a mostrar (Importaciones o exportaciones). Es por esto, que el treemap al usar areas como marcas, nos permitira mostrar haciendo uso del area abarcada, la inversión o gasto realizado por el país enfocada en los diferentes grupos de productos que se comercializan en America Latina. Adicionalmente, se haran uso de una gama de colores que permita agrupar los diferentes tipos de productos.
+
 
 
 
