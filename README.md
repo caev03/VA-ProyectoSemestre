@@ -15,12 +15,12 @@ Estos datos estan conformados por atributos de tipo categoricos cómo los nombre
 
 **WHY:**   
 T1: Encontrar caracteristicas entre los comercios de los paises, para fomentar nuevos TLC.  
-T2: Explorar las carreras políticas de nuestros congresistas   
+T2: Presentar y localizar los cargos politicos (features) de los congresistas antes de ocupar dicho cargo.
 
 **HOW:**  
 
  - T1 - Dinastias politicas
-V1 - sumar la cantidad de personas con x apllido que se pretanron en ese año.
+V1 - sumar la cantidad de personas con un apllido específico que se pretanron en ese año.
 Line Chart!
 
 selecciona familia y ->
@@ -38,7 +38,16 @@ Alcaldia, Congreso: camara y senado, gobierno, gobernacion
 saturacion -  sobre si la familia gano
 slider para el tiempo
 
- - T2
+ - T2 - Cargos políticos previos de los congresistas
+ 
+V1 -  seleccionar interactivamente al congresista que quiero ver.
+
+V2 - mapa de colombia con slider del tiempo abajo, se localiza dependiendo el departamento
+shape - tipo de cargo
+hue - partido politico
+
+
+
 
 
 
