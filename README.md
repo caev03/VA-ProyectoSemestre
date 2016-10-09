@@ -15,9 +15,7 @@ Estos datos estan conformados por atributos de tipo categoricos cómo los nombre
 
 **WHY:**   
 T1: Encontrar caracteristicas entre los comercios de los paises, para fomentar nuevos TLC.  
-T2: Explorar los Tratados de Libre Comercio de los paises y los productos que ellos importan y exportan para descubrir una correlación.   
-T3.1: Presentar y localizar los paises que hacen mayor uso de su TCL.   
-T3.2: Localizar los paises que están desaprovechando sus TLCs al comerciar productos con paises sin TLC o con una tasa mayor.
+T2: Explorar las carreras políticas de nuestros congresistas   
 
 **HOW:**  
 
