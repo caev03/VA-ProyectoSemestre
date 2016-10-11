@@ -16,7 +16,6 @@ Estos datos estan conformados por atributos de tipo categoricos cómo los nombre
 **WHY:**   
 T1: Descubrir y localizar las dinastías politicas identificadas por el apellido en cada región y su movimiento entre regiones al cabo de los años (features)   
 T2: Presentar y localizar los cargos politicos (features) de los congresistas antes de ocupar dicho cargo.  
-T3: Observar y denotar los cambios de las elecciones con los años.
 
 **HOW:**  
 
@@ -32,15 +31,13 @@ V2 - familia especifica en colombia a lo largo del tiempo
 
  - T2 - Cargos políticos previos de los congresistas
  
-V1 -  seleccionar interactivamente al congresista que quiero ver.
-
-V2 - mapa de colombia con slider del tiempo abajo, se localiza dependiendo el departamento
-shape - tipo de cargo
-hue - partido politico
-
-
-
-
+V1 - Modismo de coordenadas paralelas
+**Marcas**: Lineas para la vida política de congresista
+**Canales**
+Posición en eje y: cargo politico dividido en senador, representante a la cámara, gobierno, alcaldía, gobernación o consejo.
+Posición en eje x: año en que ocupó dicho cargo.
+Color (Matiz) - corriente politica.
+![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/T2-V1.jpg)
 
 
 ## Bibliografía
