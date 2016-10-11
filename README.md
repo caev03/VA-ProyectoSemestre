@@ -21,10 +21,9 @@ T3: Observar y denotar los cambios de las elecciones con los años.
 **HOW:**  
 
  - T1 - Dinastias politicas
-V1 - sumar la cantidad de personas con un apllido específico que se pretanron en ese año.
-Line Chart!
-
-selecciona familia y ->
+V1 - Presentar tendencias de la cantidad de candidatos que se presentan cada año y que comparten un apellido especifico
+Marca: Lineas
+Canales: Color, Posición Horizontal, Posición horizontal
 
 V2 - familia especifica en colombia a lo largo del tiempo
 marcas
