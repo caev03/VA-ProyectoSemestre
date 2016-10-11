@@ -24,9 +24,11 @@ T3: Observar y denotar los cambios de las elecciones con los años.
 V1 - Presentar tendencias de la cantidad de candidatos que se presentan cada año y que comparten un apellido especifico  
 **Marca**: Lineas  
 **Canales**: Color, Posición Horizontal, Posición horizontal  
+![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/T1-V1.png)
 V2 - familia especifica en colombia a lo largo del tiempo  
 **Marca**: Areas  
 **Canales**: Posición ( Ubicación geografica ), Color ( Cociente #CandidatosElegidos / # Candidatos ), Area ( #Candidatos )  
+![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/T1-V2.png)
 
  - T2 - Cargos políticos previos de los congresistas
  
