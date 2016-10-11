@@ -1,5 +1,5 @@
 ## Visual Analytics
-# Tendencias en el aprovechamiento de los TLC en America
+# Base de Datos Electoral - CEDE
 Autores:  
 Camilo Escobar Velásquez  
 David Ricardo Mayorga  
