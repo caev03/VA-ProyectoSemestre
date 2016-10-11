@@ -20,23 +20,13 @@ T3: Observar y denotar los cambios de las elecciones con los años.
 
 **HOW:**  
 
- - T1 - Dinastias politicas
-V1 - Presentar tendencias de la cantidad de candidatos que se presentan cada año y que comparten un apellido especifico
-Marca: Lineas
-Canales: Color, Posición Horizontal, Posición horizontal
-
-V2 - familia especifica en colombia a lo largo del tiempo
-marcas
-lineas - denotación familiar
-esfera: 
-
-canales:
-para el sitio - mapa geografico
-radio de la esfera -  cantidad de candidatos por familia
-shape - para el tipo de cargo?
-Alcaldia, Congreso: camara y senado, gobierno, gobernacion
-saturacion -  sobre si la familia gano
-slider para el tiempo
+ - T1 - Dinastias politicas    
+V1 - Presentar tendencias de la cantidad de candidatos que se presentan cada año y que comparten un apellido especifico  
+**Marca**: Lineas  
+**Canales**: Color, Posición Horizontal, Posición horizontal  
+V2 - familia especifica en colombia a lo largo del tiempo  
+**Marca**: Areas  
+**Canales**: Posición ( Ubicación geografica ), Color ( Cociente #CandidatosElegidos / # Candidatos ), Area ( #Candidatos )  
 
  - T2 - Cargos políticos previos de los congresistas
  
