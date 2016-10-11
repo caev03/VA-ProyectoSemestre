@@ -14,7 +14,7 @@ Los datos estan representados en tablas cuya granularidad es cantidad de votos r
 Estos datos estan conformados por atributos de tipo categoricos cómo los nombres de las localidades/regiones, nombre del candidato, nombre de la curul a la que se presenta, nombre del partido politico y atributos de tipo cuantitativo como la cantidad de votos y la fecha de la votación y estan organizados secuencialmente. Finalmente, al ser datos de las votaciones el dataset es estatico, puede aumentar con el tiempo, pero los datos obtenidos no cambian una vez publicados.
 
 **WHY:**   
-T1 - Descubrir y localizar las dinastías politicas identificadas por el apellido en cada región y su movimiento entre regiones al cabo de los años (features) 
+T1 - Descubrir y localizar las dinastías politicas identificadas por el apellido en cada región y su movimiento entre regiones al cabo de los años (features)   
 T2: Presentar y localizar los cargos politicos (features) de los congresistas antes de ocupar dicho cargo.
 
 **HOW:**  
