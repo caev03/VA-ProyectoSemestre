@@ -9,9 +9,22 @@ Felipe Matè Porras
 **WHAT:**
 Los datos constan principalmente de diferentes tablas que estan agrupadas en 2 grupos principales: Registro de votaciones tanto regionales como de las principales ciudades y tablas de acompañamiento .
 
-Los datos estan representados en tablas cuya granularidad es cantidad de votos recibidos por un candidato en una fecha en una mesa ubicada en un punto de votación de la localidad/región dada para una curul mientras pertenecia a un partido politico especifico.
+Los registros de votaciones constan principalmente de tablas divididas por año y cargo al que aspiraron: asamblea, consejo, alcaldía, gobernación, cámara, senado y presidencia.  
+Ahora cada tabla tiene los sigueintes atributos:  
+- año en curso (ordenado cuantitativo)
+- id de tipo de elección (ordenado ordinal)
+- id del departamento (categórico)
+- id del municipio (ordenado ordinal)
+- nombre del municipio (categorico)
+- id del partido (categórico)
+- número en el tarjeton del candidato (ordenado ordinal)
+- nombres y apellidos del candidato (categóricos)
+- cantidad de votos obtenidos (cuantitativo)
+- cargo obtenido: 1 o nulo en caso contrario (categórico)
 
-Estos datos estan conformados por atributos de tipo categoricos cómo los nombres de las localidades/regiones, nombre del candidato, nombre de la curul a la que se presenta, nombre del partido politico y atributos de tipo cuantitativo como la cantidad de votos y la fecha de la votación y estan organizados secuencialmente. Finalmente, al ser datos de las votaciones el dataset es estatico, puede aumentar con el tiempo, pero los datos obtenidos no cambian una vez publicados.
+Finalmente, al ser datos de las votaciones el dataset es estatico, puede aumentar con el tiempo, pero los datos obtenidos no cambian una vez publicados.
+
+
 
 **WHY:**   
 T1: Descubrir y localizar las dinastías politicas identificadas por el apellido en cada región y su movimiento entre regiones al cabo de los años (features)   
