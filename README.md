@@ -27,8 +27,10 @@ Finalmente, al ser datos de las votaciones el dataset es estatico, puede aumenta
 
 
 **WHY:**   
-T1: Descubrir y localizar las dinastías politicas identificadas por el apellido en cada región y su movimiento entre regiones al cabo de los años (features)   
-T2: Presentar y localizar los cargos politicos (features) de los congresistas antes de ocupar dicho cargo.  
+T1: Encontrar patrones entre los candidatos electos por tipo elección según el nombre o el apellido.  
+T2: Entretener al usuario con visualizaciones que produzcan empatía en él.  
+T3: Localizar por nombre o apellido el porcentaje de efectividad.  
+  
 
 **HOW:**  
 
