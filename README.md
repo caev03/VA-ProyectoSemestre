@@ -27,9 +27,9 @@ Finalmente, al ser datos de las votaciones el dataset es estatico, puede aumenta
 
 
 **WHY:**   
-T1: Encontrar patrones entre los candidatos electos por tipo elección según el nombre o el apellido.  
-T2: Entretener al usuario con visualizaciones que produzcan empatía en él.  
-T3: Localizar por nombre o apellido el porcentaje de efectividad.  
+T1: Entretener a los usuarios que tengan poco interés sobre política y aprendan de ella.
+T1.1: Encontrar patrones entre los candidatos electos por tipo elección según el nombre o el apellido.
+T1.2: Localizar por nombre o apellido el porcentaje de efectividad de elecciones.
   
 
 **HOW:**  
