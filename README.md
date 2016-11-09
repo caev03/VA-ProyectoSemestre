@@ -1,15 +1,16 @@
 ![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/DISCBanner.JPG)
 
-# Tools For Enjoy Election Data From Colombia Since 1958.
+# Tools For Enjoy Election Data From Colombia Since 1958. 
 
 ###Presented by:
-* [Camilo Andrés Escobar Velásquez](https://github.com/caev03)
-* [Felipe Matè Porras](https://github.com/f94f)
-* [David Ricardo Mayorga](https://github.com/damayor)
+* :chart_with_downwards_trend: [Camilo Andrés Escobar Velásquez](https://github.com/caev03)  
+* :bar_chart: [Felipe Matè Porras](https://github.com/f94f)  
+* :chart_with_upwards_trend: [David Ricardo Mayorga](https://github.com/damayor)  
 
 ##Problem Description
 
-In the last few years voting abstention is a big problem for colombian politics, only the 38% of the people who can vote did it in the last voting that Colombia had. [\[1\]](http://www.bbc.com/mundo/noticias-america-latina-37539590) [\[2\]](https://www.wilsoncenter.org/sites/default/files/voting_for_peace_wwc-fip_final_english.pdf) One of the theories that explain this is that the people is not interested enough in politics and is giving the opportunity to the 38% of the population to decide the future of the country. Therefore, in order to reduce this percentage Monica Pachon ( Dean of the Faculty of Political Science, Government and International Relations at Rosary University ) and a group of researchers collected the information of the elections in Colombia since 1958 for the different political positions so they can via Data Visualization generate an interested in politics.
+In the last few years voting abstention is a big problem for colombian politics, only the 38% of the people who can vote did it in the last voting that Colombia had. [\[1\]](http://www.bbc.com/mundo/noticias-america-latina-37539590) [\[2\]](https://www.wilsoncenter.org/sites/default/files/voting_for_peace_wwc-fip_final_english.pdf) One of the theories that explain this is that the people is not interested enough in politics and is giving the opportunity to the 38% of the population to decide the future of the country. Therefore, in order to reduce this percentage Monica Pachon ( Dean of the Faculty of Political Science, Government and International Relations at Rosary University ) and a group of researchers collected the information of the elections in Colombia since 1958 for the different political positions so they can via Data Visualization generate an interested in politics.  
+.  
 ![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/VotingAbstention.JPG)  
 
 
@@ -23,7 +24,7 @@ In the last few years voting abstention is a big problem for colombian politics,
 
 The election database collected by Monica Pachon has a few tables that represent Municipalities, Political Parties, Departments and Election Type ( Presidency, Mayoralty, ... ) using a name and an id for each row.
 
-Municipality_Id | Municipality_Name | - | PoliticalParty_Id | PoliticalParty_Name | - | ElectionType_Id | ElectionType_Name
+muni_id | muni_name | - | party_id |party_name | - | elect_type_id | elect_type_name
 ---|---|---|---|---|---|---|---
 1 | Bogotá D.C | - | 3 | Liberal Party | - | 555 | Presidency
 5 | Medellín | - | 4 | Conservative Party | - | 845 | Mayoralty
@@ -41,15 +42,16 @@ Additionally, it has a table that represents the votes acquired by a candidate i
 - Amount of votes ( quantitative )
 - Won the election: 1 ( true ) or 0 ( false )
 
-year|electionType|Department_Id|Municipality_Id|Party_Id|Code_List|First_LastName|Second_Lastname|Name|Votes|Seats
+year|elect_type|dept_id|muni_id|party_id|code_list|first_lastName|second_lastname|name|votes|seats
 ---|---|---|---|---|---|---|---|---|---|---
 2010|1|55|1|555|3|"Sanabria"|"Ordoñez"|"Daniel"|200|0
 2011|5|68|5|845|4|"Cobos"|"Triana"|"Jose Andrés"|150|1
+...|...|...|...|...|...|...|...|...|...|...
 
-**WHY:**   
-T1: Entretener a los usuarios que tengan poco interés sobre política y aprendan de ella.
-T1.1: Encontrar patrones entre los candidatos electos por tipo elección según el nombre o el apellido.
-T1.2: Localizar por nombre o apellido el porcentaje de efectividad de elecciones.
+##WHY:   
+###T1: Entretener a los usuarios que tengan poco interés sobre política y aprendan de ella.
+* T1.1: Encontrar patrones entre los candidatos electos por tipo elección según el nombre o el apellido.
+* T1.2: Localizar por nombre o apellido el porcentaje de efectividad de elecciones.
   
 
 **HOW:**  
