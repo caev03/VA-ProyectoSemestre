@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/DISCBanner.JPG)
 
-# Tools for enjoy election data from Colombia since 1958.
+# Tools For Enjoy Election Data From Colombia Since 1958.
 
 ###Presented by:
 * [Camilo Andrés Escobar Velásquez](https://github.com/caev03)
@@ -9,7 +9,9 @@
 
 ##Problem Description
 
-In the last few years voting abstention is a big problem for colombian politics, only the 38% of the people who can vote did it in the last voting that Colombia had.[\[1\]](http://www.bbc.com/mundo/noticias-america-latina-37539590) One of the theories that explain this is that the people is not interested enough in politics and is giving the opportunity to the 38% of the population to decide the future of the country. Therefore, in order to reduce this percentage Monica Pachon ( Dean of the Faculty of Political Science, Government and International Relations at Rosary University ) and a group of researchers collected the information of the elections in Colombia since 1958 for the different political positions so they can via Data Visualization generate an interested in politics.
+In the last few years voting abstention is a big problem for colombian politics, only the 38% of the people who can vote did it in the last voting that Colombia had. [\[1\]](http://www.bbc.com/mundo/noticias-america-latina-37539590) [\[2\]](https://www.wilsoncenter.org/sites/default/files/voting_for_peace_wwc-fip_final_english.pdf) One of the theories that explain this is that the people is not interested enough in politics and is giving the opportunity to the 38% of the population to decide the future of the country. Therefore, in order to reduce this percentage Monica Pachon ( Dean of the Faculty of Political Science, Government and International Relations at Rosary University ) and a group of researchers collected the information of the elections in Colombia since 1958 for the different political positions so they can via Data Visualization generate an interested in politics.
+![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/VotingAbstention.JPG)  
+
 
 ##Who:
 The principal stakeholders of the project are:
@@ -17,21 +19,27 @@ The principal stakeholders of the project are:
 * John Guerra - Teacher of Visual Analitycs Class at Universidad de los Andes 
 * Tiberio Hernandez - Teacher of Visual Analitycs Class at Universidad de los Andes 
 
-What:
-Los datos constan principalmente de diferentes tablas que estan agrupadas en 2 grupos principales: Registro de votaciones tanto regionales como de las principales ciudades y tablas de acompañamiento .
+##What:
 
-Los registros de votaciones constan principalmente de tablas divididas por año y cargo al que aspiraron: asamblea, consejo, alcaldía, gobernación, cámara, senado y presidencia.  
-Ahora cada tabla tiene los sigueintes atributos:  
-- año en curso (ordenado cuantitativo)
-- id de tipo de elección (ordenado ordinal)
-- id del departamento (categórico)
-- id del municipio (ordenado ordinal)
-- nombre del municipio (categorico)
-- id del partido (categórico)
-- número en el tarjeton del candidato (ordenado ordinal)
-- nombres y apellidos del candidato (categóricos)
-- cantidad de votos obtenidos (cuantitativo)
-- cargo obtenido: 1 o nulo en caso contrario (categórico)
+The election database collected by Monica Pachon has a few tables that represent Municipalities, Political Parties, Departments and Election Type ( Presidence, Mayoralty, ... ) using a name and an id for each row.
+
+Municipality Id | Municipality Name | - | PoliticalParty Id | PoliticalParty Name | - | ElectionType Id | ElectionType Name
+---|---|---|---|---|---|---|---
+1 | Bogotá D.C | - | 3 | Partido Liberal | - | 555 | Presidencia
+5 | Medellín | - | 4 | Partido Conservador | - | 845 | Alcaldía
+...|...| - |...|...| - |...|...
+
+Additionally, it has a table that represents the votes acquired by a candidate in a municipality running for a specific position when was part of a specific political party. The columns extracted from the data base are:
+
+- year ( sorted - quantitative )
+- election type Id ( sorted - ordinal)
+- Department Id ( categorical )
+- Municipality Id ( sorted - ordinal )
+- Party Id ( categorical )
+- Position inside Voting Card ( sorted - ordinal)
+- Complete name of candidate ( categorical )
+- Amount of votes ( quantitative )
+- Won the election: 1 ( true ) or 0 ( false ) 
 
 Finalmente, al ser datos de las votaciones el dataset es estatico, puede aumentar con el tiempo, pero los datos obtenidos no cambian una vez publicados.
 
