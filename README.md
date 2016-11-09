@@ -95,7 +95,7 @@ year|elect_type|dept_id|muni_id|party_id|code_list|first_lastName|second_lastnam
 * Tamara MUNZNER: Visualization Analysis and Design AK Peters 2014.
 * Colin WARE: Visual Thinking for Design. Morgan Kaufman, 2008.
 
-[ProjectPage]:caev03.github.io/VA-ProyectoSemestre
+[ProjectPage]:http://caev03.github.io/VA-ProyectoSemestre
 [VisualAnalyticsPage]:http://johnguerra.co/classes/isis_4822_fall_2016/
 [LinkJohn]:http://johnguerra.co/
 [LinkTiberio]:https://sistemasacademico.uniandes.edu.co/~jhernand/dokuwiki/doku.php
