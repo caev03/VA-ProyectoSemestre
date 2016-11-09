@@ -21,12 +21,12 @@ The principal stakeholders of the project are:
 
 ##What:
 
-The election database collected by Monica Pachon has a few tables that represent Municipalities, Political Parties, Departments and Election Type ( Presidence, Mayoralty, ... ) using a name and an id for each row.
+The election database collected by Monica Pachon has a few tables that represent Municipalities, Political Parties, Departments and Election Type ( Presidency, Mayoralty, ... ) using a name and an id for each row.
 
-Municipality Id | Municipality Name | - | PoliticalParty Id | PoliticalParty Name | - | ElectionType Id | ElectionType Name
+Municipality_Id | Municipality_Name | - | PoliticalParty_Id | PoliticalParty_Name | - | ElectionType_Id | ElectionType_Name
 ---|---|---|---|---|---|---|---
-1 | Bogotá D.C | - | 3 | Partido Liberal | - | 555 | Presidencia
-5 | Medellín | - | 4 | Partido Conservador | - | 845 | Alcaldía
+1 | Bogotá D.C | - | 3 | Liberal Party | - | 555 | Presidency
+5 | Medellín | - | 4 | Conservative Party | - | 845 | Mayoralty
 ...|...| - |...|...| - |...|...
 
 Additionally, it has a table that represents the votes acquired by a candidate in a municipality running for a specific position when was part of a specific political party. The columns extracted from the data base are:
@@ -39,7 +39,12 @@ Additionally, it has a table that represents the votes acquired by a candidate i
 - Position inside Voting Card ( sorted - ordinal)
 - Complete name of candidate ( categorical )
 - Amount of votes ( quantitative )
-- Won the election: 1 ( true ) or 0 ( false ) 
+- Won the election: 1 ( true ) or 0 ( false )
+
+year|electionType|Department_Id|Municipality_Id|Party_Id|Code_List|First_LastName|Second_Lastname|Name|Votes|Seats
+---|---|---|---|---|---|---|---|---|---|---
+2010|1|55|1|555|3|"Sanabria"|"Ordoñez"|"Daniel"|200|0
+2011|5|68|5|845|4|"Cobos"|"Triana"|"Jose Andrés"|150|1
 
 Finalmente, al ser datos de las votaciones el dataset es estatico, puede aumentar con el tiempo, pero los datos obtenidos no cambian una vez publicados.
 
