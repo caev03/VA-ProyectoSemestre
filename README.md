@@ -33,12 +33,12 @@ T1.2: Localizar por nombre o apellido el porcentaje de efectividad de elecciones
   
 
 **HOW:**  
-
- - T1 - Dinastias politicas    
-V1 - Presentar tendencias de la cantidad de candidatos que se presentan cada año y que comparten un apellido especifico  
-**Marca**: Lineas  
-**Canales**: Color, Posición Horizontal, Posición horizontal  
+    
+***V1*** - Presentar tendencias en la relación entre cantidad de canditados electos sobre la cantidad total de candidatos con un nombre dado o en la relación entre candidatos electos
+****Marca****: Lineas  
+****Canales****: Color, Posición Horizontal, Posición horizontal  
 ![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/T1-V1.png)
+
 V2 - familia especifica en colombia a lo largo del tiempo  
 **Marca**: Areas  
 **Canales**: Posición ( Ubicación geografica ), Color ( Cociente #CandidatosElegidos / # Candidatos ), Area ( #Candidatos )  
