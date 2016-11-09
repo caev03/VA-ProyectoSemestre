@@ -1,5 +1,11 @@
-## Visual Analytics
-# Base de Datos Electoral - CEDE
+![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/DISCBanner.JPG)
+
+# Tools for enjoy election data from Colombia since 1958.
+
+##Problem Description
+Now at days in Colombia, the importance of political knowledge is decreasing due the new generations doesn't want to vote, so less people in interested in politics  as a general culture subject
+
+
 Autores:  
 Camilo Escobar Velásquez  
 David Ricardo Mayorga  
