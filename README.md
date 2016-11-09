@@ -87,6 +87,17 @@ year|elect_type|dept_id|muni_id|party_id|code_list|first_lastName|second_lastnam
 
 ## How
 
+### Viz 1 - Elegibility Of "\<Name/Lastname\>" In Colombia Throughout History
+
+![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/Vis1.jpg)  
+Show trends of elegibility of a person by its name shown in two different scenarios allowing the user to move over the years using a scroll bar:
+
+1. Amount of candidates elected with that name over the amount of candidates with that name by each department  
+2. Amount of candidates elected with that name over the amount of candidates by each department  
+  
+**Marks:** Areas ( Departments )  
+**Channels:** Saturation ( Choosen relation value )
+
 ## Insights:
 
 ## Paper:
