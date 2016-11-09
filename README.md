@@ -14,10 +14,10 @@ In the last few years voting abstention is a big problem for colombian politics,
 
 
 ##Who:
-The principal stakeholders of the project are:
-* Monica Pachon - Dean of the Faculty of Political Science, Government and International Relations at Rosary University 
-* John Guerra - Teacher of Visual Analitycs Class at Universidad de los Andes 
-* Tiberio Hernandez - Teacher of Visual Analitycs Class at Universidad de los Andes 
+###The principal stakeholders of the project are:
+* **Monica Pachon** - Dean of the Faculty of Political Science, Government and International Relations at Rosary University 
+* **John Guerra** - Teacher of Visual Analytics Class at Universidad de los Andes 
+* **Tiberio Hernandez** - Teacher of Visual Analytics Class at Universidad de los Andes 
 
 ##What:
 
@@ -45,10 +45,6 @@ year|electionType|Department_Id|Municipality_Id|Party_Id|Code_List|First_LastNam
 ---|---|---|---|---|---|---|---|---|---|---
 2010|1|55|1|555|3|"Sanabria"|"Ordoñez"|"Daniel"|200|0
 2011|5|68|5|845|4|"Cobos"|"Triana"|"Jose Andrés"|150|1
-
-Finalmente, al ser datos de las votaciones el dataset es estatico, puede aumentar con el tiempo, pero los datos obtenidos no cambian una vez publicados.
-
-
 
 **WHY:**   
 T1: Entretener a los usuarios que tengan poco interés sobre política y aprendan de ella.
