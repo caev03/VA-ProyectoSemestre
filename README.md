@@ -19,6 +19,8 @@
   3. [Why](https://github.com/caev03/VA-ProyectoSemestre#why)
   4. [How](https://github.com/caev03/VA-ProyectoSemestre#how)
     * [Viz 1](https://github.com/caev03/VA-ProyectoSemestre#viz-1---elegibility-of-namelastname-in-colombia-throughout-history)
+    * [Viz 2](https://github.com/caev03/VA-ProyectoSemestre#viz-2---distribution-of-namelastname-in-colombian-politics-throughout-history)
+    * [Viz 3](https://github.com/caev03/VA-ProyectoSemestre#viz-3---distribution-of-political-power-by-namelastname-in-colombia-throughout-history)
 5. [Insights](https://github.com/caev03/VA-ProyectoSemestre#insights)
 6. [Paper](https://github.com/caev03/VA-ProyectoSemestre#paper)
 7. [Bibliography](https://github.com/caev03/VA-ProyectoSemestre#bibliography)
