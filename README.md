@@ -83,9 +83,9 @@ year|elect_type|dept_id|muni_id|party_id|code_list|first_lastName|second_lastnam
 
 ## Why
 
-### T1: Entretener a los usuarios que tengan poco interés sobre política y aprendan de ella.
-* T1.1: Encontrar patrones entre los candidatos electos por tipo elección según el nombre o el apellido.
-* T1.2: Localizar por nombre o apellido el porcentaje de efectividad de elecciones.
+### T1: Make the users who have little interest in politics enjoy it and learn from it.
+* T1.1: Discover patterns among the candidates elected by the type of election according to the name or last name.
+* T1.2: Locate by name or surname the percentage of effectiveness of elections.
   
 
 ## How
