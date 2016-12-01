@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<style>
+
+		.axis--x path {
+		  display: none;
+		}
+
+		.line {
+		  fill: none;
+		  stroke: steelblue;
+		  stroke-width: 1.5px;
+		}
+
+	</style>
+
+    <title>Visual Analitycs</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/business-casual.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
+          rel="stylesheet" type="text/css">
+
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+</head>
+
+<body>
+<br>
+<div class="container">
+    <div class="row box text-center">
+        <h1>Elegibility Of <em id="userName" style="color: #2e6da4">Escobar</em> In Colombia Throughout History</h1>
+    </div>
+    <div class="row box">
+        <div class="col-lg-12">
+            <hr>
+            <h2 class="intro-text text-center">Vizualitation <strong>Description</strong>
+            </h2>
+            <hr>
+            <p style="color: #c9302c">Total de políticos a lo largo de los años</p>
+            <p style="color: #c9302c">Compárese y mire cómo ha evolucionado su familia política comparada con 
+			las castas más fuertes que han dom(in)ado el país a lo largo de los años. Se le presenta todos los políticos
+			con apellidos Uribe, Samper y Gaviria comparado con el suyo, + APELLIDO</p>
+        </div>
+    </div>
+    <div class="row box text-center">
+        <h3 style="color: #c9302c">Verifique que su vizualización se esta creando en este div</h3>
+        <div class="svg">
+            <!--TODO elimine desde aquí-->
+			<iframe width="1000" height="700" src="linechart.html"></iframe>
+            <!--svg width="500" height="500" style="background-color: #8a6d3b"></svg>
+            <!--TODO hasta aqui-->
+        </div>
+    </div>
+</div>
+
+<script src="//d3js.org/d3.v4.min.js"></script>
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="linechart.js"</script>
+<script src="d3.min_3.js"</script>
+</body>
+
+</html>
