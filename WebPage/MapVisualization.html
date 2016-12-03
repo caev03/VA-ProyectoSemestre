@@ -13,11 +13,12 @@
 
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/business-casual.css" rel="stylesheet">
+    <link href="./css/MapVisualization.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
           rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
           rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/turban/d3.slider/master/d3.slider.css">
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
@@ -25,9 +26,25 @@
 
 <body>
 <br>
+<style>
+    input[type='checkbox'] {
+        -webkit-appearance:none;
+        width:30px;
+        height:30px;
+        background:white;
+        border-radius:5px;
+        border:2px solid #555;
+    }
+    input[type='checkbox']:checked {
+        background: #abd;
+    }
+    .checkboxs{
+        padding-top: 5%;
+    }
+</style>
 <div class="container">
     <div class="row box text-center">
-        <h1>Elegibility Of <em id="userName" style="color: #2e6da4">Escobar</em> In Colombia Throughout History</h1>
+        <h1>Elegibility Of <em class="userName" style="color: #2e6da4">Escobar</em> In Colombia Throughout History</h1>
     </div>
     <div class="row box">
         <div class="col-lg-12">
@@ -42,12 +59,66 @@
                 egestas.</p>
         </div>
     </div>
-    <div class="row box text-center">
-        <h3 style="color: #c9302c">Verifique que su vizualización se esta creando en este div</h3>
-        <div class="svg">
-            <!--TODO elimine desde aquí-->
-            <svg width="500" height="500" style="background-color: #8a6d3b"></svg>
-            <!--TODO hasta aqui-->
+    <div class="row     box">
+        <div class="row">
+            <div class="col-lg-8 text-center">
+                <svg id="svgDiv" style="width: 600px; height: 600px">
+                    <!--<defs>-->
+                        <!--<pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">-->
+
+                        <!--</pattern>-->
+                    <!--</defs>-->
+                    <image class="background" xlink:href="http://wallpapercave.com/wp/RIt0TFT.jpg" x="0" y="0" width="800" height="600" ></image>
+
+                </svg>
+            </div>
+            <div class="col-lg-4 col-lg-12" style="height: 500px">
+                <div class="row center-block" style="height: 25%">
+                    <h3>Relation Scale:</h3>
+                </div>
+                <div class="row center-block" style="height: 25%">
+                    <svg>
+                        <defs>
+                            <linearGradient id="Gradient-1"
+                                            x1="0" y1="0" x2="100%" y2="0">
+                                <stop offset="0%" stop-color="#FFFFFF" ></stop>
+                                <stop offset="100%" stop-color="#0000ff" ></stop>
+                            </linearGradient>
+                        </defs>
+                        <rect x="0" y="7" width="300" height="40" fill= "url(#Gradient-1)" stroke="#333333" stroke-width="4px" ></rect>
+                        <rect x="20" y="0" width="10" height="52" fill="rgba(0,0,0,0)" stroke="#FF0000" stroke-width="4px" ></rect>
+                        <text x="0" y="62">0</text>
+                        <text x="290" y="62">1</text>
+                    </svg>
+                </div>
+                <div class="row center-block" style="height: 25%">
+                    <div class="col-lg-1 text-center center-block checkboxs">
+                        <input type="checkbox" name="opt1" value="opt1" id="opt1" checked>
+                    </div>
+                    <div class="col-lg-11 center-block">
+                        <h5>Amount of '<em class="userName">Escobar</em>' elected</h5>
+                        <div style="width: 80%; height: 2px; background-color: #000000"></div>
+                        <h5>Amount of '<em class="userName">Escobar</em>' candidates</h5>
+                    </div>
+                </div>
+                <!--<div class="row" style="width: 90%; height: 2px; background-color: #000000"></div>-->
+                <div class="row center-block" style="height: 25%">
+                    <div class="col-lg-1 text-center center-block checkboxs">
+                        <input type="checkbox" name="opt2" value="opt2" id="opt2">
+                    </div>
+                    <div class="col-lg-11 center-block">
+                        <h5>Amount of '<em class="userName">Escobar</em>' chosen</h5>
+                        <div style="width: 80%; height: 2px; background-color: #000000"></div>
+                        <h5>Amount of Candidates chosen</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="slider-items"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -55,7 +126,11 @@
 
 <script src="./js/jquery.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script src="<!--TODO inserte el link a su archivo js aqui-->"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="https://rawgit.com/turban/d3.slider/master/d3.slider.js"></script>
+<script src="https://d3js.org/d3-queue.v3.min.js"></script>
+<script src="./js/MapVisualization.js"></script>
 </body>
 
 </html>

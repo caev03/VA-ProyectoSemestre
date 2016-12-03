@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Josefin+Slab|Arvo|Lato|Vollkorn|Abril+Fatface|Old+Standard+TT|Droid+Sans|Lobster|Inconsolata|Montserrat|Playfair+Display|Karla|Alegreya|Libre+Baskerville|Merriweather|Lora|Archivo+Narrow|Neuton|Signika|Questrial|Fjalla+One|Bitter|Varela+Round);
+
+.background {
+    fill: #eee;
+    pointer-events: all;
+}
+
+.map-layer {
+    fill: #fff;
+    stroke: #aaa;
+}
+
+.effect-layer{
+    pointer-events:none;
+}
+
+text{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+text.big-text{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.effect-layer text, text.dummy-text{
+    font-size: 12px;
+}
+#slider-items{
+    margin: 10px 10px 0px 10px;
+}
+.background {
+    pointer-events: all;
+}
+
+.mpio {fill : #ddc;}
+
+.mpio-borde {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-width: 0.5;}
+
+.depto-borde {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-linejoin: round;
+    stroke-width: 2;}
+
+#feature {
+    fill: #ccc;
+    cursor: pointer;
+}
+
+.mesh {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
