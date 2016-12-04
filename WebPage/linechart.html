@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <meta charset="utf-8">
 <style>
 
@@ -12,14 +11,41 @@
   stroke: steelblue;
   stroke-width: 1.5px;
 }
+  
+.myline {
+  fill: none;
+  stroke: black;
+  stroke-width: 3px;
+}
+  
+  .axis line {
+  fill: none;
+  stroke: #D4D8DA;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+  
+  
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: #F1F3F3;
+  stroke: #6F257F;
+  stroke-width: 5px;
+}
+  
+.hover-line {
+  stroke: #6F257F;
+  stroke-width: 2px;
+  stroke-dasharray: 3,3;
+}
 
 </style>
-<script src="http://d3js.org/d3.v4.min.js"></script>
-
-<body>
 <svg width="960" height="500"></svg>
-</body>
-
+<script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
 var svg = d3.select("svg"),
@@ -30,17 +56,25 @@ var svg = d3.select("svg"),
 
 //var parseTime = d3.timeParse("%Y%m%d");
   var parseTime = d3.timeParse("%Y");
+  bisectDate = d3.bisector(function(d) { return d.year; }).left;
 
 var x = d3.scaleTime().range([0, width]),
     y = d3.scaleLinear().range([height, 0]),
     z = d3.scaleOrdinal(d3.schemeCategory10);
+  
+var maxY = 25;
 
 var line = d3.line()
-    .curve(d3.curveBasis)
+    .curve(d3.curveBasis) ///<= comment if you want it uncurved
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.count); });
+  
+var myline = d3.line()
+    .curve(d3.curveBasis) 
+    .x(function(d) { return x(d.year); })
+    .y(function(d) { return y(d.value); });  
 
-d3.tsv('totalPoliticos.tsv', type, function(error, data) {
+d3.csv("familiasFuertes.csv", type, function(error, data) {
   if (error) throw error;
 
   var lastnames = data.columns.slice(1).map(function(id) {
@@ -53,12 +87,15 @@ d3.tsv('totalPoliticos.tsv', type, function(error, data) {
   });
 
   x.domain(d3.extent(data, function(d) { return d.date; }));
+  
+  maxY = d3.max(lastnames, function(c) { return d3.max(c.values, function(d) { return d.count; }); });
 
-  y.domain([
-    d3.min(lastnames, function(c) { return d3.min(c.values, function(d) { return d.count; }); }),
-    d3.max(lastnames, function(c) { return d3.max(c.values, function(d) { return d.count; }); })
-  ]);
-
+  y.domain([ 0, maxY  ]);
+  
+  mypath("mylastname.json");
+  //mypath("herrera.json"); //copypaste de lo q arrojo la query
+  //mypath("http://localhost:3000/lastnamesByYear?lastname=perez");
+  
   z.domain(lastnames.map(function(c) { return c.id; }));
 
   g.append("g")
@@ -75,8 +112,9 @@ d3.tsv('totalPoliticos.tsv', type, function(error, data) {
       .attr("dy", "0.71em")
       .attr("fill", "#000")
       .text("# políticos");
+  
 
-  var lastname = g.selectAll(".lastname")
+  var lastname = g.selectAll(".politicos.lastname")
     .data(lastnames)
     .enter().append("g")
       .attr("class", "lastname");
@@ -93,6 +131,9 @@ d3.tsv('totalPoliticos.tsv', type, function(error, data) {
       .attr("dy", "0.35em")
       .style("font", "10px sans-serif")
       .text(function(d) { return d.id; });
+  
+  
+
 });
 
 function type(d, _, columns) {
@@ -100,6 +141,115 @@ function type(d, _, columns) {
   for (var i = 1, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
   return d;
 }
+  
+  
+function mypath(ruta)
+{
+   
+     {d3.json(ruta, function(error, data)
+        {
+  if (error) throw error;
+  
+       
+  data.forEach(function(d) {
+      d.year = parseTime(d.year);
+      d.value = +d.value;
+    });
+
+  x.domain(d3.extent(data, function(d) { return d.year; }));
+
+   
+  maxY = Math.max(d3.max(data, function(d) { return d.value; }) * 1.005, maxY);
+       
+ 	y.domain([0, maxY]); //comentelo y sencillo
+     
+       
+  //paila si dominio se mayor al original   
+  /*g.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(yy))
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y",6)
+      .attr("dy", "0.71em")
+      .attr("fill", "#000")
+      .text("# políticos");*/
+
+  
+      var mypath = g//.selectAll("lastname")
+      .append("g")
+      .attr("class", "lastname");
+      /*.datum(data)
+    .enter()*/;
+      
+   mypath.append("path")
+        .datum(data)
+        .attr("class", "myline")
+        .attr("d", myline);// function(d) { return myline(d.values); });
+	/*
+  mypath.append("path")
+      .attr("class", "line2")
+      .attr("d", function(d) { return line(d.values); })
+      .style("stroke", function(d) { return z(d.id); });
+		*/
+  /*mypath.append("text")
+      .datum(function(d) { return  d.value[d.value.length - 1]; })
+      .attr("transform", function(d) { return "translate(" + x(d.value.year) + "," + y(d.value.value) + ")"; })
+      .attr("x", 3)
+      .attr("dy", "0.35em")
+      .style("font", "10px sans-serif")
+      .text("Gomez");//function(d) { return d.id; });*/
+});
+    
+    //Interactivity  
+      /*
+    var focus = g.append("g")
+        .attr("class", "focus")
+        .style("display", "none");
+
+    focus.append("myline")
+        .attr("class", "x-hover-line hover-line")
+        .attr("y1", 0)
+        .attr("y2", height);
+
+    focus.append("myline")
+        .attr("class", "y-hover-line hover-line")
+        .attr("x1", width)
+        .attr("x2", width);
+
+    focus.append("circle")
+        .attr("r", 7.5);
+
+    focus.append("text")
+        .attr("x", 15)
+      	.attr("dy", ".31em");
+
+    svg.append("rect")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+        .attr("class", "overlay")
+        .attr("width", width)
+        .attr("height", height)
+        .on("mouseover", function() { focus.style("display", null); })
+        .on("mouseout", function() { focus.style("display", "none"); })
+        .on("mousemove", mousemove);
+
+    function mousemove() {
+      var x0 = x.invert(d3.mouse(this)[0]),
+          i = bisectDate(data, x0, 1),
+          d0 = data[i - 1],
+          d1 = data[i],
+          d = x0 - d0.year > d1.year - x0 ? d1 : d0;
+      focus.attr("transform", "translate(" + x(d.year) + "," + y(d.value) + ")");
+      focus.select("text").text(function() { return d.value; });
+      focus.select(".x-hover-line").attr("y2", height - y(d.value));
+      focus.select(".y-hover-line").attr("x2", width + width);
+    }*/
+        
+} 
+    
+  
+    
+}
+  
 
 </script>
-</html>
