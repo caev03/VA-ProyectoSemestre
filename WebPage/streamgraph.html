@@ -40,7 +40,7 @@
   <script>
     
     
-d3.csv('trends.csv', function(err, d){
+d3.csv('http://186.82.177.38:3000/streamgraph/escobar', function(err, d){
   if(err) console.log(err);
   //console.log(d)
   
@@ -72,7 +72,7 @@ var data = mqpdata;
   
 
 var stack = d3.stack()
-    .keys(["AE", "AREN", "BBT", "BC", "BME", "CE", "CH", "CM", "CS", "ECE", "EV", "HU", "ID", "IE", "IMGD", "MA", "ME", "MG", "PH", "RBE", "SSPS"])
+    .keys(["ALCALDE", "ASAMBLEA DEPARTAMENTAL", "CAMARA", "CONCEJO MUNICIPAL", "GOBERNADOR", "PRESIDENTE", "PRESIDENTE (SEGUNDA VUELTA)", "SENADO"])
     .order(d3.stackOrderNone)
     .offset(d3.stackOffsetWiggle);
 
