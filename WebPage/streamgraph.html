@@ -39,24 +39,24 @@
 <body>
   <script>
     
-    
-d3.csv('http://186.82.177.38:3000/streamgraph/escobar', function(err, d){
+    d3.csv('http://186.82.177.38:3000/streamgraph/escobar', function(err, d){
   if(err) console.log(err);
   //console.log(d)
-  
-  var nested_data = d3.nest()
-		.key(function(d) { return d.date; })
+      
+    var nested_data = d3.nest()
+		.key(function(d) { return d.year; })
 		.entries(d);
   
-  //console.log(nested_data);
-  
-  var mqpdata = nested_data.map(function(d){
+  //console.log(nested_data);  
+    
+    var mqpdata = nested_data.map(function(d){
     var obj = {
       month: new Date(d.key, 0, 1)
     }
     
     d.values.forEach(function(v){
-      obj[v.key] = +v.value;
+      obj[v.elec_type_name] = v.cantidad;
+      console.log(d.cantidad)
     })
     
     return obj;
@@ -65,9 +65,8 @@ d3.csv('http://186.82.177.38:3000/streamgraph/escobar', function(err, d){
   buildStreamGraph(mqpdata);
   
 })
-
-
-function buildStreamGraph(mqpdata) {
+    
+    function buildStreamGraph(mqpdata) {
 var data = mqpdata;
   
 
@@ -128,7 +127,7 @@ svg.selectAll("path")
     .on('mouseout', function(d){      
       d3.select(this).style('fill', 
          d3.rgb( d3.select(this).style("fill") ).darker());
-         d3.select("#major").text("!");
+         d3.select("#major").text("Mouse over");
   tooltip.transition()
                .duration(500)
                .style("opacity", 0);
