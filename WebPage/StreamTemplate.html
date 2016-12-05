@@ -51,7 +51,10 @@
             <p align="center" id="major">---</p>
 	    
 	    <script>
-            d3.json('http://186.82.177.38:3000/streamgraph/escobar', function(err, d){
+		    
+		    var currentLastname = "LOPEZ"
+		    
+            d3.json('http://157.253.207.182:3000/streamgraph/'+currentLastname, function(err, d){
                 if(err) console.log(err);
                 //console.log(d)
                 var nested_data = d3.nest()
