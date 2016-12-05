@@ -49,21 +49,8 @@
             <h2 align="center">¡¡¡Guau!!! no me esperaba esos resultados, o ¿sí los esperaba?</h2>
             <h3 align="center">Años</h3>
             <p align="center" id="major">!</p>
-        <div class="svg">
-            <!--TODO elimine desde aquí-->
-            <!--<iframe width="1000" height="700" src="streamgraph.html"></iframe>-->
-            <!--<svg width="1000" height="700" style="background-color: #8a6d3b"></svg>-->
-            <!--TODO hasta aqui-->
-            <svg width="1000" height="700"></svg>
-        </div>
-    </div>
-</div>
-
-
-<script src="./js/jquery.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script src="<!--TODO inserte el link a su archivo js aqui-->"></script>
-	<script>
+	    
+	    <script>
             d3.json('http://186.82.177.38:3000/streamgraph/escobar', function(err, d){
                 if(err) console.log(err);
                 //console.log(d)
@@ -141,6 +128,22 @@
                 var xAxisGroup = svg.append("g").call(xAxis);
             }
   </script>
+	    
+	    
+        <div class="svg">
+            <!--TODO elimine desde aquí-->
+            <!--<iframe width="1000" height="700" src="streamgraph.html"></iframe>-->
+            <!--<svg width="1000" height="700" style="background-color: #8a6d3b"></svg>-->
+            <!--TODO hasta aqui-->
+            <svg width="1000" height="700"></svg>
+        </div>
+    </div>
+</div>
+
+
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="<!--TODO inserte el link a su archivo js aqui-->"></script>
 </body>
 
 </html>
