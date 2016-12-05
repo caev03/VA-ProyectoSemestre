@@ -172,7 +172,7 @@
                     </div>
                     <div class="col-lg-6">
                         <label for="button"></label>
-                        <a id="button" class ="btn btn-info btn-lg btn-block" href="./WebPage/LinechartTemplate.html">Continue</a>
+                        <a id="button" class ="btn btn-info btn-lg btn-block" onclick="saveLastname()">Continue</a>
                     </div>
                 </div>
             </div>
@@ -193,6 +193,18 @@
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
+
+    function saveLastname() {
+        console.log($('#usr').val())
+        localStorage.setItem("userLastname", $('#usr').val())
+        var f = localStorage.getItem("userLastname")
+        if(f==$('#usr').val()){
+            window.location.href = './WebPage/LinechartTemplate.html';
+        }
+        else{
+            alert("Something is wrong with your browser")
+        }
+    }
 </script>
 
 </body>

@@ -52,7 +52,7 @@
 	    
 	    <script>
 		    
-		    var currentLastname = "LOPEZ"
+		    var currentLastname = localStorage.getItem("userLastname");
 		    
             d3.json('https://visualelections.herokuapp.com/streamgraph/'+currentLastname, function(err, d){
                 if(err) console.log(err);
@@ -130,7 +130,7 @@
             <!--<svg width="1000" height="700" style="background-color: #8a6d3b"></svg>-->
             <!--TODO hasta aqui-->
 	    </div>
-	    <a class ="btn btn-info btn-lg btn-block" href="https://caev03.github.io/VA-ProyectoSemestre">HOME</a>
+	    <a class ="btn btn-info btn-lg btn-block" href="../">HOME</a>
     </div>
 </div>
 

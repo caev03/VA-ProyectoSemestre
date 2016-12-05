@@ -1,6 +1,6 @@
 var currentYear = 1972
 var currentOption = 1
-var currentLastname = "LOPEZ"
+var currentLastname =localStorage.getItem("userLastname")
 var maximo = 0
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open( "GET", "https://visualelections.herokuapp.com/mapBetterYearFOption/"+currentLastname, false ); // false for synchronous request
@@ -117,7 +117,6 @@ function clicked(d, departamento){
             console.log(dividendo)
             console.log(dividendo*300)
             $('#cuadrito').attr("transform", "translate("+parseInt(dividendo*290)+",0)");
-            console.log($('#targetValue'))
             $('#targetValue').context.innerHTML = Math.round(dividendo*100)/100;
             $('#targetValue')[0].innerHTML = Math.round(dividendo*100)/100;
         }
