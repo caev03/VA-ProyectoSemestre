@@ -54,7 +54,16 @@
             <!--<iframe width="1000" height="700" src="streamgraph.html"></iframe>-->
             <!--<svg width="1000" height="700" style="background-color: #8a6d3b"></svg>-->
             <!--TODO hasta aqui-->
-            <script>
+            <svg width="1000" height="700"></svg>
+        </div>
+    </div>
+</div>
+
+
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="<!--TODO inserte el link a su archivo js aqui-->"></script>
+	<script>
             d3.json('http://186.82.177.38:3000/streamgraph/escobar', function(err, d){
                 if(err) console.log(err);
                 //console.log(d)
@@ -132,15 +141,6 @@
                 var xAxisGroup = svg.append("g").call(xAxis);
             }
   </script>
-            <svg width="1000" height="700"></svg>
-        </div>
-    </div>
-</div>
-
-
-<script src="./js/jquery.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script src="<!--TODO inserte el link a su archivo js aqui-->"></script>
 </body>
 
 </html>
