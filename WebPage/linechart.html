@@ -44,7 +44,7 @@
 }
 
 </style>
-<h2> <center> Colombian politics by lastname</center></h2>
+<h2> <center> Colombian politicians by Lastname</center></h2>
 <h3> <center>¿Would they be your relatives?</center></h3>
 <svg width="960" height="500"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -157,7 +157,7 @@ d3.csv("familiasFuertes.csv", type, function(error, data) {
     	.attr("y", 150  )
       .attr("dy", "0.34em")
       .style("font", "11px sans-serif")
-      .text("First elections after \n\r 1991 constitucional");//TODO print lastname
+      .text("<- First elections after \n\r 1991 constitucional");//TODO print lastname
   
   
 
@@ -202,7 +202,7 @@ function mypath(ruta)
       .attr("y",6)
       .attr("dy", "0.71em")
       .attr("fill", "#000")
-      .text("Cantidad de políticos");
+      .text("Ammount of politicians");
 
          
       var mypath = g//.selectAll("lastname")
@@ -221,7 +221,7 @@ function mypath(ruta)
       .attr("x", width +-780)
       .attr("dy", "0.34em")
       .style("font", "30px serif")
-      .text(currentlastname+" last name");//TODO print lastname
+      .text(currentlastname+" ");//TODO print lastname
        
     
     //Interactivity  
