@@ -3,7 +3,7 @@ var currentOption = 1
 var currentLastname = "LOPEZ"
 var maximo = 0
 var xmlHttp = new XMLHttpRequest();
-xmlHttp.open( "GET", "http://localhost:3000/mapBetterYearFOption/"+currentLastname, false ); // false for synchronous request
+xmlHttp.open( "GET", "https://visualelections.herokuapp.com/mapBetterYearFOption/"+currentLastname, false ); // false for synchronous request
 xmlHttp.send( null );
 currentYear = xmlHttp.responseText;
 console.log(currentYear)
@@ -126,14 +126,14 @@ function clicked(d, departamento){
 function ejecutar(){
     if(currentOption == 1){
         d3.queue()
-            .defer(d3.json, "http://localhost:3000/mapColombia")
-            .defer(d3.json, "http://localhost:3000/colombianMapFOption/"+currentLastname+":"+dicti[currentYear])
+            .defer(d3.json, "https://visualelections.herokuapp.com/mapColombia")
+            .defer(d3.json, "https://visualelections.herokuapp.com/colombianMapFOption/"+currentLastname+":"+dicti[currentYear])
             .await(ready)
     }
     else{
         d3.queue()
-            .defer(d3.json, "http://localhost:3000/mapColombia")
-            .defer(d3.json, "http://localhost:3000/colombianMapSOption/"+currentLastname+":"+dicti[currentYear])
+            .defer(d3.json, "https://visualelections.herokuapp.com/mapColombia")
+            .defer(d3.json, "https://visualelections.herokuapp.com/colombianMapSOption/"+currentLastname+":"+dicti[currentYear])
             .await(ready)
     }
 }
