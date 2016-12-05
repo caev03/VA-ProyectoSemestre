@@ -44,7 +44,7 @@
 </style>
 <div class="container">
     <div class="row box text-center">
-        <h1>Elegibility Of <em class="userName" style="color: #2e6da4">Escobar</em> In Colombia Throughout History</h1>
+        <h1>Elegibility Of <em class="userName" style="color: #2e6da4">Escobar</em><br> In Colombia Throughout History</h1>
     </div>
     <div class="row box">
         <div class="col-lg-12">
@@ -59,8 +59,8 @@
                 egestas.</p>
         </div>
     </div>
-    <div class="row     box">
-        <div class="row">
+    <div class="row box mapBox">
+        <div class="row ">
             <div class="col-lg-8 text-center">
                 <svg id="svgDiv" style="width: 600px; height: 600px">
                     <!--<defs>-->
@@ -68,13 +68,12 @@
 
                         <!--</pattern>-->
                     <!--</defs>-->
-                    <image class="background" xlink:href="http://wallpapercave.com/wp/RIt0TFT.jpg" x="0" y="0" width="800" height="600" ></image>
-
+                    <!--<image class="background" xlink:href="https://images.alphacoders.com/106/106413.jpg" x="0" y="0" width="700" height="600" ></image>-->
                 </svg>
             </div>
-            <div class="col-lg-4 col-lg-12" style="height: 500px">
+            <div class="col-lg-4 col-lg-12 mapLegend" style="height: 500px">
                 <div class="row center-block" style="height: 25%">
-                    <h3>Relation Scale:</h3>
+                    <h3>Relation Scale: <em id="targetValue">#</em> </h3>
                 </div>
                 <div class="row center-block" style="height: 25%">
                     <svg>
@@ -85,8 +84,8 @@
                                 <stop offset="100%" stop-color="#0000ff" ></stop>
                             </linearGradient>
                         </defs>
-                        <rect x="0" y="7" width="300" height="40" fill= "url(#Gradient-1)" stroke="#333333" stroke-width="4px" ></rect>
-                        <rect x="20" y="0" width="10" height="52" fill="rgba(0,0,0,0)" stroke="#FF0000" stroke-width="4px" ></rect>
+                        <rect x="0" y="7" width="300" height="40" fill="url(#Gradient-1)" stroke="#333333" stroke-width="4px" ></rect>
+                        <rect x="0" y="0" id="cuadrito" width="10" height="52" fill="rgba(0,0,0,0)" stroke="#FF0000" stroke-width="4px" ></rect>
                         <text x="0" y="62">0</text>
                         <text x="290" y="62">1</text>
                     </svg>
@@ -117,7 +116,7 @@
         <br>
         <div class="row">
             <div class="col-lg-12">
-                <div id="slider-items"></div>
+                <div id="slider-items" class="mapLegend"></div>
             </div>
         </div>
     </div>

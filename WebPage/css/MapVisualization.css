@@ -44,7 +44,7 @@ text.big-text{
 
 .depto-borde {
     fill: none;
-    stroke: #e0e0e0;
+    stroke: #808080;
     stroke-linejoin: round;
     stroke-width: 2;}
 
@@ -58,4 +58,13 @@ text.big-text{
     stroke: #fff;
     stroke-linecap: round;
     stroke-linejoin: round;
+}
+.mapBox{
+    background-image: url('http://cdn.wallpapersafari.com/50/19/xOI4D0.jpg');
+}
+.mapLegend{
+    background-color: rgba(255,255,255,0.7);
+}
+.tick text{
+    fill: white;
 }

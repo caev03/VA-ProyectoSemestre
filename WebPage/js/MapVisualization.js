@@ -1,8 +1,18 @@
 var currentYear = 1972
 var currentOption = 1
-var coo = null
-var deeptoos = null
+var currentLastname = "LOPEZ"
+var maximo = 0
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", "http://localhost:3000/mapBetterYearFOption/"+currentLastname, false ); // false for synchronous request
+xmlHttp.send( null );
+currentYear = xmlHttp.responseText;
+console.log(currentYear)
 
+$('.userName').each(function (index, value) {
+    $(this).context.innerHTML = currentLastname
+})
+
+var rangeScale = d3.scale.linear().domain([0,1]).range([0,1])
 var colorScale = d3.scale.linear()
     .domain([0, 1])
     .range(["#fff", "#0000ff"])
@@ -13,7 +23,7 @@ var dicti = {"1958":1958,"1960":1962,"1962":1964,"1964":1966,"1966":1968
     ,"1988":1990,"1990":1991,"1992":1992,"1994":1994,"1996":1997
     ,"1998":1998,"2000":2000,"2002":2002,"2004":2003,"2006":2006
     ,"2008":2007,"2010":2010}
-d3.select('#slider-items').call(d3.slider().axis(d3.svg.axis().ticks(27)).min(1958).max(2010).step(2).on('slide',function (evt, value) {
+d3.select('#slider-items').call(d3.slider().value(parseInt(currentYear)).axis(d3.svg.axis().ticks(27)).min(1958).max(2010).step(2).on('slide',function (evt, value) {
   render(value);
 }));
 
@@ -29,8 +39,6 @@ $('#opt2').click(function () {
     $('#opt1').prop('checked', false);
     render(currentYear);
 })
-
-// arreglarEje()
 
 function render(value){
     currentYear = value
@@ -51,7 +59,6 @@ var path = d3.geo.path()
     .projection(projection);
 
 var svg = d3.select("#svgDiv");
-    // .on("click", reset);
 
 var g = svg.append("g")
     .attr("id","mapSvg")
@@ -59,8 +66,9 @@ var g = svg.append("g")
 
 function ready(error, co, departamento){
     if(error) throw error;
-    console.log(departamento)
-    console.log(departamento[0])
+    if(currentOption==2){
+        arreglarEscala(departamento[0]);
+    }
     g.selectAll(".mpio")
         .data(topojson.feature(co, co.objects.depts).features)
         .enter().append("path")
@@ -68,7 +76,7 @@ function ready(error, co, departamento){
         .attr("id", "feature")
         .attr("d", path)
         .style("fill", function(d) { return pintar(d, departamento[0])})
-        .on("click", function (d) { clicked( this, d, co) });
+        .on("click", function (d) { clicked( d, departamento[0]) });
 
     g.append("path")
         .datum(topojson.mesh(co, co.objects.depts, function(a, b) { return a !== b; }))
@@ -79,30 +87,53 @@ function ready(error, co, departamento){
 function pintar(d, departamento){
     for (var i=0; i < departamento.length; i++){
         if(d.properties.dpt == departamento[i].name_dpto){
-            return colorScale(1-departamento[i].value)
+            if(currentOption==2){
+                return colorScale(rangeScale(departamento[i].value*100))
+            }
+            return colorScale(departamento[i].value)
         }
     }
 }
-
-
-function arreglarEje(){
-    $(".tick text").each(function(index,value){
-        var s = $(this).text().replace(",","")
-        console.log(s+"-"+dicti[s])
-    })
+function arreglarEscala(departamento){
+    maximo = 0;
+    for(var i = 0; i< departamento.length; i++){
+        if(parseFloat(departamento[i].value)>maximo){
+            maximo = departamento[i].value
+        }
+    }
+    rangeScale = d3.scale.linear().domain([0,maximo*100]).range([0,1])
 }
 
+function clicked(d, departamento){
+    for (var i=0; i < departamento.length; i++){
+        if(d.properties.dpt == departamento[i].name_dpto){
+            var dividendo = 1;
+            if(currentOption==2){
+                dividendo = rangeScale(departamento[i].value*100)
+            }
+            else{
+                dividendo = departamento[i].value
+            }
+            console.log(dividendo)
+            console.log(dividendo*300)
+            $('#cuadrito').attr("transform", "translate("+parseInt(dividendo*290)+",0)");
+            console.log($('#targetValue'))
+            $('#targetValue').context.innerHTML = Math.round(dividendo*100)/100;
+            $('#targetValue')[0].innerHTML = Math.round(dividendo*100)/100;
+        }
+    }
+}
 function ejecutar(){
     if(currentOption == 1){
         d3.queue()
             .defer(d3.json, "http://localhost:3000/mapColombia")
-            .defer(d3.json, "http://localhost:3000/colombianMapFOption/ESCOBAR:"+dicti[currentYear])
+            .defer(d3.json, "http://localhost:3000/colombianMapFOption/"+currentLastname+":"+dicti[currentYear])
             .await(ready)
     }
     else{
         d3.queue()
             .defer(d3.json, "http://localhost:3000/mapColombia")
-            // .defer(d3.json, "http://localhost:3000/dptos/"+dicti[currentYear]+":"+currentOption)
+            .defer(d3.json, "http://localhost:3000/colombianMapSOption/"+currentLastname+":"+dicti[currentYear])
             .await(ready)
     }
 }
