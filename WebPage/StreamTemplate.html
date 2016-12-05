@@ -54,7 +54,7 @@
 		    
 		    var currentLastname = "LOPEZ"
 		    
-            d3.json('http://157.253.207.182:3000/streamgraph/'+currentLastname, function(err, d){
+            d3.json('visualelections.herokuapp.com/streamgraph/'+currentLastname, function(err, d){
                 if(err) console.log(err);
                 //console.log(d)
                 var nested_data = d3.nest()
