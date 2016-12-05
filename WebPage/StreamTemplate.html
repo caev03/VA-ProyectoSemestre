@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    
+
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
     <title>Visual Analitycs</title>
@@ -45,21 +45,21 @@
     </div>
     <div class="row box text-center">
         <h3 style="color: #c9302c">La siguiente visualización es un Streamgraph</h3>
-	    <h1 align="center">Cargos políticos que ha tenido mi "familia" a lo largo de los años</h1>
-            <h2 align="center">¡¡¡Guau!!! no me esperaba esos resultados, o ¿sí los esperaba?</h2>
-            <h3 align="center">Años</h3>
-            <p align="center" id="major">---</p>
-	    
-	    <script>
-		    
-		    var currentLastname = localStorage.getItem("userLastname");
-		    
+        <h1 align="center">Cargos políticos que ha tenido mi "familia" a lo largo de los años</h1>
+        <h2 align="center">¡¡¡Guau!!! no me esperaba esos resultados, o ¿sí los esperaba?</h2>
+        <h3 align="center">Años</h3>
+        <p align="center" id="major">---</p>
+
+        <script>
+
+            var currentLastname = localStorage.getItem("userLastname");
+
             d3.json('https://visualelections.herokuapp.com/streamgraph/'+currentLastname, function(err, d){
                 if(err) console.log(err);
                 //console.log(d)
                 var nested_data = d3.nest()
-		            .key(function(d) { return d.year; })
-		            .entries(d);
+                        .key(function(d) { return d.year; })
+                        .entries(d);
                 var mqpdata = nested_data.map(function(d){
                     var obj = {
                         month: new Date(d.key, 0, 1)
@@ -75,69 +75,70 @@
             function buildStreamGraph(mqpdata) {
                 var data = mqpdata;
                 var stack = d3.stack()
-                    .keys(["ALCALDE", "ASAMBLEA DEPARTAMENTAL", "CAMARA", "CONCEJO MUNICIPAL", "GOBERNADOR", "PRESIDENTE", "PRESIDENTE (SEGUNDA VUELTA)", "SENADO"])
-                    .order(d3.stackOrderNone)
-                    .offset(d3.stackOffsetWiggle);
+                        .keys(["ALCALDE", "ASAMBLEA DEPARTAMENTAL", "CAMARA", "CONCEJO MUNICIPAL", "GOBERNADOR", "PRESIDENTE", "PRESIDENTE (SEGUNDA VUELTA)", "SENADO"])
+                        .order(d3.stackOrderNone)
+                        .offset(d3.stackOffsetWiggle);
                 var series = stack(data);
                 var width = 850, height = 500;
                 var x = d3.scaleTime()
-                    .domain(d3.extent(data, function(d){ return d.month; }))
-                    .range([100, width]);
+                        .domain(d3.extent(data, function(d){ return d.month; }))
+                        .range([100, width]);
                 // setup axis
                 var xAxis = d3.axisBottom(x);
                 var y = d3.scaleLinear()
-                    .domain([0, d3.max(series, function(layer) { return d3.max(layer, function(d){ return d[0] + d[1];}); })])
-                    .range([height/2, -200]);
+                        .domain([0, d3.max(series, function(layer) { return d3.max(layer, function(d){ return d[0] + d[1];}); })])
+                        .range([height/2, -200]);
                 var color = d3.scaleLinear()
-                    .range(["#51D0D7", "#31B5BB"]);
+                        .range(["#51D0D7", "#31B5BB"]);
                 var color = d3.scaleOrdinal(d3.schemeCategory20);
                 var area = d3.area()
-                    .x(function(d) { console.info('in area function', d); return x(d.data.month); })
-                    .y0(function(d) { return y(d[0]); })
-                    .y1(function(d) { return y(d[1]); })
-                    .curve(d3.curveBasis);
+                        .x(function(d) { console.info('in area function', d); return x(d.data.month); })
+                        .y0(function(d) { return y(d[0]); })
+                        .y1(function(d) { return y(d[1]); })
+                        .curve(d3.curveBasis);
                 var tooltip = d3.select("body").append("div")
-	                .attr("class", "tooltip");
+                        .attr("class", "tooltip");
                 var svg = d3.select("#streamg").append("svg")
-                    .attr("width", width)
-                    .attr("height", height);
+                        .attr("width", width)
+                        .attr("height", height);
                 svg.selectAll("path")
-                    .data(series)
-                    .enter().append("path")
-                    .attr("d", area)
-                    .style("fill", function() { return color(Math.random()); })
-                    .on('mouseover', function(d){      
-                        d3.select(this).style('fill',d3.rgb( d3.select(this).style("fill") ).brighter());
-  		                d3.select("#major").text(d.key);
-                    })
-                .on('mouseout', function(d){      
-                    d3.select(this).style('fill', 
-                    d3.rgb( d3.select(this).style("fill") ).darker());
-                    d3.select("#major").text("---");
-                })
+                        .data(series)
+                        .enter().append("path")
+                        .attr("d", area)
+                        .style("fill", function() { return color(Math.random()); })
+                        .on('mouseover', function(d){
+                            d3.select(this).style('fill',d3.rgb( d3.select(this).style("fill") ).brighter());
+                            d3.select("#major").text(d.key);
+                        })
+                        .on('mouseout', function(d){
+                            d3.select(this).style('fill',
+                                    d3.rgb( d3.select(this).style("fill") ).darker());
+                            d3.select("#major").text("---");
+                        })
                 svg.append("g")
-                    .attr("class", "axis axis--x")
-                    .attr("transform", "translate(0," + (height) + ")")
-                    .call(xAxis);
+                        .attr("class", "axis axis--x")
+                        .attr("transform", "translate(0," + (height) + ")")
+                        .call(xAxis);
                 var xAxisGroup = svg.append("g").call(xAxis);
             }
-  </script>
-	    
-	    
+        </script>
+
+
         <div class="svg" id="streamg">
-            <!--TODO elimine desde aquí-->
-            <!--<iframe width="1000" height="700" src="streamgraph.html"></iframe>-->
-            <!--<svg width="1000" height="700" style="background-color: #8a6d3b"></svg>-->
-            <!--TODO hasta aqui-->
-	    </div>
-	    <a class ="btn btn-info btn-lg btn-block" href="../">HOME</a>
+        </div>
+        <a class ="btn btn-info btn-lg btn-block" onclick="eraseLastname()">HOME</a>
     </div>
 </div>
 
 
 <script src="./js/jquery.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script src="<!--TODO inserte el link a su archivo js aqui-->"></script>
+<script>
+    function eraseLastname(){
+        localStorage.removeItem("userLastname")
+        window.location.href = "../"
+    }
+</script>
 </body>
 
 </html>
