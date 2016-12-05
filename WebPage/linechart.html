@@ -32,9 +32,9 @@
 }
 
 .focus circle {
-  fill: #F1F3F3;
-  stroke: #6F257F;
-  stroke-width: 5px;
+  fill: white;
+  stroke: black;
+  stroke-width: 4px;
 }
   
 .hover-line {
@@ -44,6 +44,8 @@
 }
 
 </style>
+<h2> <center>Cantidad de políticos en Colombia por apellido</center></h2>
+<h3> <center>¿Serán familiares lejanos suyos?</center></h3>
 <svg width="960" height="500"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
@@ -70,10 +72,26 @@ var line = d3.line()
     .y(function(d) { return y(d.count); });
   
 var myline = d3.line()
-    .curve(d3.curveBasis) 
+    .curve(d3.curveMonotoneX) //curveCardinal curveMonotoneX,curveCatmullRom
     .x(function(d) { return x(d.year); })
     .y(function(d) { return y(d.value); });  
 
+
+// - Lineas pintadas  
+  
+
+  politicosPaths(); //Tiene que ir primero
+  mypath("mylastname.json"); 
+
+
+ // mypath("http://localhost:3000/lastnamesByYear?lastname=herrera"); //Nor workkin yet because connection failure
+ //  mypath("http://localhost:3000/lastnamesByYear?lastname="+textfield);
+
+  
+  
+// - Funciones
+  
+function politicosPaths() { 
 d3.csv("familiasFuertes.csv", type, function(error, data) {
   if (error) throw error;
 
@@ -92,9 +110,7 @@ d3.csv("familiasFuertes.csv", type, function(error, data) {
 
   y.domain([ 0, maxY  ]);
   
-  mypath("mylastname.json");
-  //mypath("herrera.json"); //copypaste de lo q arrojo la query
-  //mypath("http://localhost:3000/lastnamesByYear?lastname=perez");
+  
   
   z.domain(lastnames.map(function(c) { return c.id; }));
 
@@ -103,6 +119,8 @@ d3.csv("familiasFuertes.csv", type, function(error, data) {
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x));
 
+  /*
+	//Supr provisional. supose that politics data are  
   g.append("g")
       .attr("class", "axis axis--y")
       .call(d3.axisLeft(y))
@@ -111,8 +129,8 @@ d3.csv("familiasFuertes.csv", type, function(error, data) {
       .attr("y",6)
       .attr("dy", "0.71em")
       .attr("fill", "#000")
-      .text("# políticos");
-  
+      .text("Cantidad de políticos");
+  */
 
   var lastname = g.selectAll(".politicos.lastname")
     .data(lastnames)
@@ -135,6 +153,7 @@ d3.csv("familiasFuertes.csv", type, function(error, data) {
   
 
 });
+}
 
 function type(d, _, columns) {
   d.date = parseTime(d.date);
@@ -150,30 +169,30 @@ function mypath(ruta)
         {
   if (error) throw error;
   
-       
+ 	
   data.forEach(function(d) {
       d.year = parseTime(d.year);
       d.value = +d.value;
     });
-
+	//console.log(JSON.stringify(data) )     ;
+      
   x.domain(d3.extent(data, function(d) { return d.year; }));
 
    
   maxY = Math.max(d3.max(data, function(d) { return d.value; }) * 1.005, maxY);
        
  	y.domain([0, maxY]); //comentelo y sencillo
-     
        
-  //paila si dominio se mayor al original   
-  /*g.append("g")
+  
+  g.append("g")
       .attr("class", "axis axis--y")
-      .call(d3.axisLeft(yy))
+      .call(d3.axisLeft(y))
     .append("text")
       .attr("transform", "rotate(-90)")
       .attr("y",6)
       .attr("dy", "0.71em")
       .attr("fill", "#000")
-      .text("# políticos");*/
+      .text("Cantidad de políticos");
 
   
       var mypath = g//.selectAll("lastname")
@@ -184,25 +203,21 @@ function mypath(ruta)
       
    mypath.append("path")
         .datum(data)
-        .attr("class", "myline")
+        .attr("class", "myline") //myline
         .attr("d", myline);// function(d) { return myline(d.values); });
-	/*
-  mypath.append("path")
-      .attr("class", "line2")
-      .attr("d", function(d) { return line(d.values); })
-      .style("stroke", function(d) { return z(d.id); });
-		*/
+	
+  
   /*mypath.append("text")
-      .datum(function(d) { return  d.value[d.value.length - 1]; })
-      .attr("transform", function(d) { return "translate(" + x(d.value.year) + "," + y(d.value.value) + ")"; })
-      .attr("x", 3)
-      .attr("dy", "0.35em")
+      .datum(function(d) { return {value: d.values[d.values.length - 1];}};) 
+      .attr("transform", function(d) { return "translate(" + x(0) + "," + y(d.y(2014)) + ")"; })//.attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.count) + ")"; })zz
+      .attr("x", width - 130)
+      .attr("dy", "0.34em")
       .style("font", "10px sans-serif")
-      .text("Gomez");//function(d) { return d.id; });*/
-});
+      .text("?lastname");//TODO print lastname*/
+
     
     //Interactivity  
-      /*
+     
     var focus = g.append("g")
         .attr("class", "focus")
         .style("display", "none");
@@ -243,8 +258,8 @@ function mypath(ruta)
       focus.select("text").text(function() { return d.value; });
       focus.select(".x-hover-line").attr("y2", height - y(d.value));
       focus.select(".y-hover-line").attr("x2", width + width);
-    }*/
-        
+    }
+     });   
 } 
     
   
