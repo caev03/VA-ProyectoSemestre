@@ -95,7 +95,7 @@
                     .curve(d3.curveBasis);
                 var tooltip = d3.select("body").append("div")
 	                .attr("class", "tooltip");
-                var svg = d3.select("body").append("svg")
+                var svg = d3.select("#streamg").append("svg")
                     .attr("width", width)
                     .attr("height", height);
                 svg.selectAll("path")
@@ -130,7 +130,7 @@
   </script>
 	    
 	    
-        <div class="svg">
+        <div class="svg" id="streamg">
             <!--TODO elimine desde aquí-->
             <!--<iframe width="1000" height="700" src="streamgraph.html"></iframe>-->
             <!--<svg width="1000" height="700" style="background-color: #8a6d3b"></svg>-->
