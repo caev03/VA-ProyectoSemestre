@@ -44,8 +44,8 @@
 }
 
 </style>
-<h2> <center>Cantidad de políticos en Colombia por apellido</center></h2>
-<h3> <center>¿Serán familiares lejanos suyos?</center></h3>
+<h2> <center> Colombian politics by lastname</center></h2>
+<h3> <center>¿Would they be your relatives?</center></h3>
 <svg width="960" height="500"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
@@ -54,14 +54,15 @@ var svg = d3.select("svg"),
     margin = {top: 20, right: 80, bottom: 30, left: 50},
     width = svg.attr("width") - margin.left - margin.right,
     height = svg.attr("height") - margin.top - margin.bottom,
-    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")"),
+    currentlastname= 'Herrera';
 
 //var parseTime = d3.timeParse("%Y%m%d");
   var parseTime = d3.timeParse("%Y");
   bisectDate = d3.bisector(function(d) { return d.year; }).left;
 
-var x = d3.scaleTime().range([0, width]),
-    y = d3.scaleLinear().range([height, 0]),
+var x = d3.scaleTime().domain([1962,2011]).range([0, width]),
+    y = d3.scaleLinear().domain([0,maxY]).range([height, 0]),
     z = d3.scaleOrdinal(d3.schemeCategory10);
   
 var maxY = 25;
@@ -81,12 +82,13 @@ var myline = d3.line()
   
 
   politicosPaths(); //Tiene que ir primero
-  mypath("mylastname.json"); 
+   var mY =
+        //mypath("mylastname.json"); 
+     //  mypath("http://157.253.208.17:3000/lastnamesByYear?lastname="+currentlastname);
+  mypath("https://visualelections.herokuapp.com/lastnamesByYear?lastname="+currentlastname); //Nor workkin yet because connection failure
+  //console.log("my recibido "+mY);
 
-
- // mypath("http://localhost:3000/lastnamesByYear?lastname=herrera"); //Nor workkin yet because connection failure
- //  mypath("http://localhost:3000/lastnamesByYear?lastname="+textfield);
-
+ 
   
   
 // - Funciones
@@ -150,6 +152,13 @@ d3.csv("familiasFuertes.csv", type, function(error, data) {
       .style("font", "10px sans-serif")
       .text(function(d) { return d.id; });
   
+    lastname.append("text")
+      .attr("x", width -281)
+    	.attr("y", 150  )
+      .attr("dy", "0.34em")
+      .style("font", "11px sans-serif")
+      .text("First elections after \n\r 1991 constitucional");//TODO print lastname
+  
   
 
 });
@@ -174,14 +183,15 @@ function mypath(ruta)
       d.year = parseTime(d.year);
       d.value = +d.value;
     });
-	//console.log(JSON.stringify(data) )     ;
+	console.log(JSON.stringify(data) )     ;
       
-  x.domain(d3.extent(data, function(d) { return d.year; }));
+  //x.domain(d3.extent(data, function(d) { return d.year; }));
 
-   
   maxY = Math.max(d3.max(data, function(d) { return d.value; }) * 1.005, maxY);
-       
+              
  	y.domain([0, maxY]); //comentelo y sencillo
+       
+       
        
   
   g.append("g")
@@ -194,7 +204,7 @@ function mypath(ruta)
       .attr("fill", "#000")
       .text("Cantidad de políticos");
 
-  
+         
       var mypath = g//.selectAll("lastname")
       .append("g")
       .attr("class", "lastname");
@@ -205,16 +215,14 @@ function mypath(ruta)
         .datum(data)
         .attr("class", "myline") //myline
         .attr("d", myline);// function(d) { return myline(d.values); });
-	
-  
-  /*mypath.append("text")
-      .datum(function(d) { return {value: d.values[d.values.length - 1];}};) 
-      .attr("transform", function(d) { return "translate(" + x(0) + "," + y(d.y(2014)) + ")"; })//.attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.count) + ")"; })zz
-      .attr("x", width - 130)
-      .attr("dy", "0.34em")
-      .style("font", "10px sans-serif")
-      .text("?lastname");//TODO print lastname*/
+       
 
+       mypath.append("text")
+      .attr("x", width +-780)
+      .attr("dy", "0.34em")
+      .style("font", "30px serif")
+      .text(currentlastname+" last name");//TODO print lastname
+       
     
     //Interactivity  
      
@@ -247,6 +255,8 @@ function mypath(ruta)
         .on("mouseover", function() { focus.style("display", null); })
         .on("mouseout", function() { focus.style("display", "none"); })
         .on("mousemove", mousemove);
+       
+       console.log("maxY0 "+maxY);
 
     function mousemove() {
       var x0 = x.invert(d3.mouse(this)[0]),
@@ -259,12 +269,31 @@ function mypath(ruta)
       focus.select(".x-hover-line").attr("y2", height - y(d.value));
       focus.select(".y-hover-line").attr("x2", width + width);
     }
-     });   
-} 
-    
-  
-    
+       
+       console.log("maxY1 "+maxY);
+       
+       //update politicos
+       
+        y.domain([0, maxY]);
+       
+       return maxY;
+       
+     });    
+}    
 }
+  
+  y.domain([0, maxY]); //comentelo y sencillo
+       
+  /*
+  g.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(y))
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y",6)
+      .attr("dy", "0.71em")
+      .attr("fill", "#000")
+      .text("Cantidad de políticos");*/
   
 
 </script>
