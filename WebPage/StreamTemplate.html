@@ -48,7 +48,7 @@
 	    <h1 align="center">Cargos políticos que ha tenido mi "familia" a lo largo de los años</h1>
             <h2 align="center">¡¡¡Guau!!! no me esperaba esos resultados, o ¿sí los esperaba?</h2>
             <h3 align="center">Años</h3>
-            <p align="center" id="major"></p>
+            <p align="center" id="major">---</p>
 	    
 	    <script>
             d3.json('http://186.82.177.38:3000/streamgraph/escobar', function(err, d){
@@ -116,7 +116,7 @@
                 .on('mouseout', function(d){      
                     d3.select(this).style('fill', 
                     d3.rgb( d3.select(this).style("fill") ).darker());
-                    d3.select("#major").text("");
+                    d3.select("#major").text("---");
                     tooltip.transition()
                         .duration(500)
                         .style("opacity", 0);
