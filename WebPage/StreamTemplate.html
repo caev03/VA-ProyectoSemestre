@@ -45,19 +45,17 @@
     </div>
     <div class="row box text-center">
         <h3 style="color: #c9302c">La siguiente visualización es un Streamgraph</h3>
+	    <h1 align="center">Cargos políticos que ha tenido mi "familia" a lo largo de los años</h1>
+            <h2 align="center">¡¡¡Guau!!! no me esperaba esos resultados, o ¿sí los esperaba?</h2>
+            <h3 align="center">Años</h3>
+            <p align="center" id="major">!</p>
         <div class="svg">
             <!--TODO elimine desde aquí-->
             <!--<iframe width="1000" height="700" src="streamgraph.html"></iframe>-->
             <!--<svg width="1000" height="700" style="background-color: #8a6d3b"></svg>-->
             <!--TODO hasta aqui-->
-            
-            <h1 align="center">Cargos políticos que ha tenido mi "familia" a lo largo de los años</h1>
-            <h2 align="center">¡¡¡Guau!!! no me esperaba esos resultados, o ¿sí los esperaba?</h2>
-            <h3 align="center">Años</h3>
-            <p align="center" id="major">!</p>
-            
             <script>
-            d3.csv('http://186.82.177.38:3000/streamgraph/escobar', function(err, d){
+            d3.json('http://186.82.177.38:3000/streamgraph/escobar', function(err, d){
                 if(err) console.log(err);
                 //console.log(d)
                 var nested_data = d3.nest()
