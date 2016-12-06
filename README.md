@@ -33,6 +33,8 @@ This project is developed as a course project for the [Visual Analytics][VisualA
 
 ### Video
 
+[![Final project video](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/portadaProyecto.JPG)][VideoDemo]
+
 ### Project Page
 [Visit the project Page][ProjectPage]
 
@@ -90,9 +92,17 @@ year|elect_type|dept_id|muni_id|party_id|code_list|first_lastName|second_lastnam
 
 ## How
 
-### Viz 1 - Elegibility Of "\<Name/Lastname\>" In Colombia Throughout History
+### Viz 1 - Distribution of Political Power by "\<Lastname\>" in Colombia Throughout History
 
-![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/Vis1.jpg)  
+![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/VisWebPage1.png)  
+Show the amount of positions obtained througtout Colombian history grouped by name or last name. Allowing to the user, to notice which one is the name or lastname with more positions by each year.
+  
+**Marks:** Lines  
+**Channels:** Horizontal and Vertical position, Angle, Color Hue
+
+### Viz 2 - Elegibility Of "\<Lastname\>" In Colombia Throughout History
+
+![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/VisWebPage2.png)  
 Show trends of elegibility of a person by its name shown in two different scenarios allowing the user to move over the years using a scroll bar:
 
 1. Amount of candidates elected with that name over the amount of candidates with that name by each department  
@@ -101,21 +111,15 @@ Show trends of elegibility of a person by its name shown in two different scenar
 **Marks:** Areas ( Departments )  
 **Channels:** Saturation ( Choosen relation value )
 
-### Viz 2 - Distribution of "\<Name/lastname\>" In Colombian Politics Throughout History
+### Viz 23- Distribution of "\<Lastname\>" In Colombian Politics Throughout History
 
-![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/Vis2.jpg)  
+![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/VisWebPage3.png)  
 Show the amount of people with a specific name/lastname that occupied a specific position by year.
   
 **Marks:** Lines  
 **Channels:** Horizontal and Vertical position, Angle, Color Hue
 
-### Viz 3 - Distribution of Political Power by Name/Lastname in Colombia Throughout History
 
-![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/Vis3.jpg)  
-Show the amount of positions obtained througtout Colombian history grouped by name or last name. Allowing to the user, to notice which one is the name or lastname with more positions by each year.
-  
-**Marks:** Lines  
-**Channels:** Horizontal and Vertical position, Angle, Color Hue
 
 ## Insights:
 
@@ -133,5 +137,5 @@ Show the amount of positions obtained througtout Colombian history grouped by na
 [LinkFelipe]:https://github.com/f94f
 [LinkDavid]:https://github.com/damayor
 [Uniandes]:http://www.uniandes.edu.co
-
+[VideoDemo]:https://youtu.be/kndLCvCEaK4
 
