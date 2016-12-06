@@ -120,6 +120,12 @@ Show the amount of people with a specific name/lastname that occupied a specific
 
 
 ## Insights:
+After the construction of the 3 visualizations new insights emerge:
+ * Which are the most effective families throughout history?
+ * What are the most remarkable years in the displacement of a "family"?
+ * In what year was the political awakening for certain "families"?
+ * There are families that share a similar story?
+ * Which are the last names that have exerted positions with greater power.
 
 ## Paper:
 
