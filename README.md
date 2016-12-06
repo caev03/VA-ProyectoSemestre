@@ -133,6 +133,7 @@ After the construction of the 3 visualizations new insights emerge:
 
 ## Paper:
 
+[See the project paper][ProjectPaper]
 ## Bibliography
 * Tamara MUNZNER: Visualization Analysis and Design AK Peters 2014.
 * Colin WARE: Visual Thinking for Design. Morgan Kaufman, 2008.
@@ -147,4 +148,5 @@ After the construction of the 3 visualizations new insights emerge:
 [Uniandes]:http://www.uniandes.edu.co
 [VideoDemo]:https://youtu.be/ITpm59GMgKM
 [ProjectPresentation]:https://caev03.github.io/VA-ProyectoSemestre/Presentacion/
+[ProjectPaper]:https://github.com/caev03/VA-ProyectoSemestre/tools-enjoy-election.pdf
 
