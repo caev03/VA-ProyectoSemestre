@@ -38,6 +38,10 @@ This project is developed as a course project for the [Visual Analytics][VisualA
 ### Project Page
 [Visit the project Page][ProjectPage]
 
+### Presentation
+
+[See the project presentation][ProjectPresentation]
+
 ## Problem Description
 
 Along the history of colombia has existed a problem because people is losing interest in politics or they are not even acquired it, this represents a concern because this could affect the elections. Therefore, it exist a need in giving the people a way to get interested to politics, that's why with the colaboration of Monica Pachon ( Dean of the Faculty of Political Science, Government and International Relations at Universidad del Rosario ) we have build a tool that allow the user to interact with the election data starting at 1958 to 2010, but not the usual way. This project is build as a tool for users to enjoy this information avoiding to show usual visualization.
@@ -142,4 +146,5 @@ After the construction of the 3 visualizations new insights emerge:
 [LinkDavid]:https://github.com/damayor
 [Uniandes]:http://www.uniandes.edu.co
 [VideoDemo]:https://youtu.be/ITpm59GMgKM
+[ProjectPresentation]:https://caev03.github.io/VA-ProyectoSemestre/Presentacion/
 
