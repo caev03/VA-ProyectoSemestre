@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Herramientas interactivas para análisis de tractografías de cerebro humano</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+    <link rel="shortcut icon" href="imgs/favicon.png"/>
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <style>
+        img {
+            width: 175px;
+            height: 100px;
+        }
+
+        .reveal ul {
+            list-style-type: none;
+        }
+        .reveal .barraDivision {
+            width: 100%;
+            height: 5px;
+            background: #e12c2c;
+            margin: 20px 30px 20px 0;
+        }
+        .reveal p{
+            font-size: 30px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .reveal td .asd {
+            font-size: 25px;
+        }
+        .reveal td {
+            vertical-align: middle;
+            text-align: center;
+        }
+        .reveal section{
+            text-align: left;
+        }
+        .reveal .alignedCenter{
+            text-align: center;
+        }
+        .reveal .slideImage{
+            width: 900px;
+            height: 300px;
+        }
+        .reveal li{
+            margin: 30px 0 30px 0;
+        }
+        .reveal .multiuso{
+            background-color: rgba(255,255,255,0.8);
+        }
+    </style>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section class="alignedCenter">
+            <table style="width: 1000px">
+                <tr>
+                    <td class="multiuso" style="width: 255px">
+                        <table>
+                            <tr><img src="../ReadMeImages/VisWebPage1.png"></tr>
+                            <tr><img src="../ReadMeImages/VisWebPage2.png"></tr>
+                            <tr><img src="../ReadMeImages/VisWebPage3.png"></tr>
+                        </table>
+                    </td>
+                    <td class="multiuso">
+                        <h3>Tools For Enjoy Election Data From Colombia Since 1958</h3>
+                        <div class="barraDivision"></div>
+                        <p class="asd">Visual Analitycs Project – Ingeniería de Sistemas y Computación - Universidad de los Andes</p>
+                        <p class="asd">Camilo Escobar, Felipe Matè, David Mayorga</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <div class="multiuso" style="padding: 15px">
+                <h3>Indice</h3>
+                <div class="barraDivision"></div>
+                <ol>
+                    <li style='color: #e12c2c;'><b><span style='color:black;'>Introducción / Conceptos clave</span></b></li>
+                    <li style='color: #e12c2c;'><span style='color:black;'>Contexto BRAVIZ</span></li>
+                    <li style='color: #e12c2c;'><span style='color:black;'>Problemática</span></li>
+                    <li style='color: #e12c2c;'><span style='color:black;'>Propuesta</span></li>
+                    <li style='color: #e12c2c;'><span style='color:black;'>Preguntas</span></li>
+                </ol>
+            </div>
+        </section>
+        <section>
+            <h3>Tac – Tomografía Axial Computarizada</h3>
+            <div class="barraDivision"></div>
+            <table>
+                <tr>
+                    <td width="50%">
+                        <p style="font-size: 40px">
+                            Técnica de imagen medica que usa radiación x para obtener
+                            cortes o secciones de objetos anatómicos con fines diagnósticos.
+                        </p>
+                    </td>
+                    <td width="50%">
+                        <img class="slideImage" src="imgs/Imagen4.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>IRM – Imágenes por resonancia magnética</h3>
+            <div class="barraDivision"></div>
+            <table>
+                <tr>
+                    <td width="50%">
+                        <img class="slideImage" src="imgs/Imagen4.png">
+                    </td>
+                    <td width="50%">
+                        <p>
+                            Técnica no invasiva que utiliza el fenómeno de la resonancia magnética
+                            nuclear para obtener información sobre la estructura y composición del
+                            cuerpo a analizar. Esta información es procesada por ordenadores y
+                            transformada en imágenes del interior de lo que se ha analizado.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>Tracto Neuronal</h3>
+            <div class="barraDivision"></div>
+            <table>
+                <tr>
+                    <td width="50%">
+                        <p style="font-size: 40px">
+                            Grupo de neuronas que se agrupan en forma de circuito, por medio de la
+                            sinapsis con el fin de transmitir información.
+                        </p>
+                    </td>
+                    <td width="50%">
+                        <img class="slideImage" src="imgs/Imagen5.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>Tractografía</h3>
+            <div class="barraDivision"></div>
+            <table>
+                <tr>
+                    <td width="50%">
+                        <img class="slideImage" src="imgs/Imagen6.png">
+                    </td>
+                    <td width="50%">
+                        <p>
+                            Procedimiento realizado para obtener información sobre los tractos
+                            presentes en el cerebro, se apoya en imágenes por resonancia
+                            magnética IRM y procesamiento de imágenes.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>Siembra</h3>
+            <div class="barraDivision"></div>
+            <table>
+                <tr>
+                    <td width="50%">
+                        <p style="font-size: 40px">
+                            Dupla ((x,y,z),r), conformada por una posición 3D dentro del cerebro
+                            y un radio de interés alrededor de la coordenada especifica.
+                        </p>
+                    </td>
+                    <td width="50%">
+                        <img class="slideImage" src="imgs/Imagen7.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>Indice</h3>
+            <div class="barraDivision"></div>
+            <ol>
+                <li style='color: #e12c2c;'><span style='color:black;'>Introducción / Conceptos clave</span></li>
+                <li style='color: #e12c2c;'><b><span style='color:black;'>Contexto BRAVIZ</span></b></li>
+                <li style='color: #e12c2c;'><span style='color:black;'>Problemática</span></li>
+                <li style='color: #e12c2c;'><span style='color:black;'>Propuesta</span></li>
+                <li style='color: #e12c2c;'><span style='color:black;'>Preguntas</span></li>
+            </ol>
+        </section>
+        <section>
+            <h3>BRAVIZ</h3>
+            <div class="barraDivision"></div>
+            <table>
+                <tr>
+                    <td width="50%">
+                        <p style="font-size: 40px">
+                            Herramienta de visualización y análisis de datos neurocientíficos,
+                            enfocada en el análisis exploratorio del cerebro humano.
+                        </p>
+                    </td>
+                    <td width="50%">
+                        <img style="width: 700px" src="imgs/Imagen8.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>BRAVIZ: Funcionalidades</h3>
+            <div class="barraDivision"></div>
+            <ol style="font-size: 55px">
+                <li style='color: #e12c2c;'><span style='color:black;'>Tractografía</span></li>
+                <li style='color: #e12c2c;'><span style='color:black;'>Generación modelo 3D Cerebro</span></li>
+                <li style='color: #e12c2c;'><span style='color:black;'>Análisis estadístico muestras</span></li>
+                <li style='color: #e12c2c;'><span style='color:black;'>Traspaso de siembras entre sujetos de estudio</span></li>
+            </ol>
+        </section>
+        <section>
+            <h3>BRAVIZ: Funcionalidades</h3>
+            <div class="barraDivision"></div>
+            <div style="text-align: center">
+                <img style="width: 800px; height: 400px;" src="imgs/Imagen9.png">
+            </div>
+        </section>
+        <section>
+            <h3>BRAVIZ: Funcionalidades</h3>
+            <div class="barraDivision"></div>
+            <div style="text-align: center">
+                <img style="width: 800px; height: 400px;" src="imgs/Imagen10.png">
+            </div>
+        </section>
+        <section>
+            <h3>Indice</h3>
+            <div class="barraDivision"></div>
+            <ol>
+                <li style='color: #e12c2c;'><span style='color:black;'>Introducción / Conceptos clave</span></li>
+                <li style='color: #e12c2c;'><span style='color:black;'>Contexto BRAVIZ</span></li>
+                <li style='color: #e12c2c;'><b><span style='color:black;'>Problemática</span></b></li>
+                <li style='color: #e12c2c;'><span style='color:black;'>Propuesta</span></li>
+                <li style='color: #e12c2c;'><span style='color:black;'>Preguntas</span></li>
+            </ol>
+        </section>
+        <section>
+            <h3>Problematica</h3>
+            <div class="barraDivision"></div>
+            <ol style="font-size: 45px">
+                <li style='color: #e12c2c;'>
+                    <span style='color:black;'>
+                        El proceso de normalización de coordenadas y radio de siembras no funciona correctamente
+                    </span>
+                </li>
+                <li style='color: #e12c2c;'>
+                    <span style='color:black;'>
+                        Visualización de maximo una siembra al tiempo
+                    </span>
+                </li>
+                <li style='color: #e12c2c;'>
+                    <span style='color:black;'>
+                        Las siembras solo se pueden realizar con esferas
+                    </span>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h3>Indice</h3>
+            <div class="barraDivision"></div>
+            <ol>
+                <li style='color: #e12c2c;'><span style='color:black;'>Introducción / Conceptos clave</span></li>
+                <li style='color: #e12c2c;'><span style='color:black;'>Contexto BRAVIZ</span></li>
+                <li style='color: #e12c2c;'><span style='color:black;'>Problemática</span></li>
+                <li style='color: #e12c2c;'><b><span style='color:black;'>Propuesta</span></b></li>
+                <li style='color: #e12c2c;'><span style='color:black;'>Preguntas</span></li>
+            </ol>
+        </section>
+        <section>
+            <h3>Propuesta</h3>
+            <div class="barraDivision"></div>
+            <ol style="font-size: 35px">
+                <li style='color: #e12c2c;'>
+                    <span style='color:black;'>
+                        Permitir el uso de otras figuras geométricas fundamentales al momento de realizar siembras,
+                        tales como cubos o elipsoides.
+                    </span>
+                </li>
+                <li style='color: #e12c2c;'>
+                    <span style='color:black;'>
+                        Habilitar la visualización de múltiples siembras, junto con la posibilidad de realizar
+                        operaciones lógicas entre estas.
+                    </span>
+                </li>
+                <li style='color: #e12c2c;'>
+                    <span style='color:black;'>
+                        Modificar el proceso de normalización de coordenadas y parámetros asociados a la siembra
+                        para mejorar el traslado de estas entre sujetos de estudio.
+                    </span>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h1>PREGUNTAS</h1>
+            <div class="barraDivision"></div>
+        </section>
+    </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            history: true,
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [
+                {src: 'plugin/markdown/marked.js'},
+                {src: 'plugin/markdown/markdown.js'},
+                {src: 'plugin/notes/notes.js', async: true},
+                {
+                    src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+                }
+            ]
+        });
+    </script>
+    <script>
+        var asd = document.getElementsByTagName("section");
+        for (var i = asd.length - 1; i >= 0; i--) {
+            asd[i].setAttribute("data-background-image", "../WebPage/img/bg1.jpg");
+        }
+    </script>
+</body>
+</html>
