@@ -40,9 +40,7 @@ This project is developed as a course project for the [Visual Analytics][VisualA
 
 ## Problem Description
 
-In the last few years voting abstention is a big problem for colombian politics, only the 38% of the people who can vote did it in the last voting that Colombia had. [\[1\]](http://www.bbc.com/mundo/noticias-america-latina-37539590) [\[2\]](https://www.wilsoncenter.org/sites/default/files/voting_for_peace_wwc-fip_final_english.pdf) One of the theories that explain this is that the people is not interested enough in politics and is giving the opportunity to the 38% of the population to decide the future of the country. Therefore, in order to reduce this percentage Monica Pachon ( Dean of the Faculty of Political Science, Government and International Relations at Rosary University ) and a group of researchers collected the information of the elections in Colombia since 1958 for the different political positions so they can via Data Visualization generate an interested in politics.  
-.  
-![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/VotingAbstention.JPG)  
+Along the history of colombia has existed a problem because people is losing interest in politics or they are not even acquired it, this represents a concern because this could affect the elections. Therefore, it exist a need in giving the people a way to get interested to politics, that's why with the colaboration of Monica Pachon ( Dean of the Faculty of Political Science, Government and International Relations at Universidad del Rosario ) we have build a tool that allow the user to interact with the election data starting at 1958 to 2010, but not the usual way. This project is build as a tool for users to enjoy this information avoiding to show usual visualization.
 
 ## Project Description
 
@@ -111,7 +109,7 @@ Show trends of elegibility of a person by its name shown in two different scenar
 **Marks:** Areas ( Departments )  
 **Channels:** Saturation ( Choosen relation value )
 
-### Viz 23- Distribution of "\<Lastname\>" In Colombian Politics Throughout History
+### Viz 3- Distribution of "\<Lastname\>" In Colombian Politics Throughout History
 
 ![](https://raw.githubusercontent.com/caev03/VA-ProyectoSemestre/master/ReadMeImages/VisWebPage3.png)  
 Show the amount of people with a specific name/lastname that occupied a specific position by year.
