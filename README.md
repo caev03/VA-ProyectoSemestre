@@ -48,7 +48,7 @@ Along the history of colombia has existed a problem because people is losing int
 
 ### The principal stakeholders of the project are:
 
-* **Monica Pachon** - Dean of the Faculty of Political Science, Government and International Relations at Rosary University 
+* **Monica Pachon** - Dean of the Faculty of Political Science, Government and International Relations at Universidad del Rosario 
 * **John Guerra** - Teacher of Visual Analytics Class at Universidad de los Andes 
 * **Tiberio Hernandez** - Teacher of Visual Analytics Class at Universidad de los Andes 
 
