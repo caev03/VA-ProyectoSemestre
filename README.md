@@ -148,5 +148,5 @@ After the construction of the 3 visualizations new insights emerge:
 [Uniandes]:http://www.uniandes.edu.co
 [VideoDemo]:https://youtu.be/ITpm59GMgKM
 [ProjectPresentation]:https://caev03.github.io/VA-ProyectoSemestre/Presentacion/
-[ProjectPaper]:https://github.com/caev03/VA-ProyectoSemestre/tools-enjoy-election.pdf
+[ProjectPaper]:https://github.com/caev03/VA-ProyectoSemestre/blob/master/tools-enjoy-election.pdf
 
