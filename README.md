@@ -18,9 +18,9 @@
   2. [What - Data Structure](https://github.com/caev03/VA-ProyectoSemestre#what)
   3. [Why - What is the purpose of the project](https://github.com/caev03/VA-ProyectoSemestre#why)
   4. [How - How the problem is going to be solved](https://github.com/caev03/VA-ProyectoSemestre#how)
-    * [Viz 1 - Elegibility Of "\<Name/Lastname\>" In Colombia Throughout History](https://github.com/caev03/VA-ProyectoSemestre#viz-1---elegibility-of-namelastname-in-colombia-throughout-history)
-    * [Viz 2 - Distribution of "\<Name/lastname\>" In Colombian Politics Throughout History](https://github.com/caev03/VA-ProyectoSemestre#viz-2---distribution-of-namelastname-in-colombian-politics-throughout-history)
-    * [Viz 3 - Distribution of Political Power by Name/Lastname in Colombia Throughout History](https://github.com/caev03/VA-ProyectoSemestre#viz-3---distribution-of-political-power-by-namelastname-in-colombia-throughout-history)
+    * [Viz 1 - Distribution of Political Power by "\<Lastname\>" in Colombia Throughout History](https://github.com/caev03/VA-ProyectoSemestre#viz-1---distribution-of-political-power-by-lastname-in-colombia-throughout-history)
+    * [Viz 2 - Elegibility Of "\<Lastname\>" In Colombia Throughout History](https://github.com/caev03/VA-ProyectoSemestre#viz-2---elegibility-of-lastname-in-colombia-throughout-history)
+    * [Viz 3- Distribution of "\<Lastname\>" In Colombian Politics Throughout History](https://github.com/caev03/VA-ProyectoSemestre#viz-3--distribution-of-lastname-in-colombian-politics-throughout-history)
 5. [Insights](https://github.com/caev03/VA-ProyectoSemestre#insights)
 6. [Paper](https://github.com/caev03/VA-ProyectoSemestre#paper)
 7. [Bibliography](https://github.com/caev03/VA-ProyectoSemestre#bibliography)
@@ -41,6 +41,9 @@ This project is developed as a course project for the [Visual Analytics][VisualA
 ### Presentation
 
 [See the project presentation][ProjectPresentation]
+
+### NodeJS Server Code
+[Visit the server repository][ServerRepository]
 
 ## Problem Description
 
@@ -149,4 +152,5 @@ After the construction of the 3 visualizations new insights emerge:
 [VideoDemo]:https://youtu.be/ITpm59GMgKM
 [ProjectPresentation]:https://caev03.github.io/VA-ProyectoSemestre/Presentacion/
 [ProjectPaper]:https://github.com/caev03/VA-ProyectoSemestre/blob/master/tools-enjoy-election.pdf
+[ServerRepository]:https://github.com/caev03/ServidorEleccionesVA
 
